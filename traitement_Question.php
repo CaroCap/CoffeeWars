@@ -14,14 +14,15 @@
         <div class="modalFormThird">
             <div class="modalFormSecond">
                 <div class="modalForm" >
+                    
                 <?php
                                     
                     $score;
 
                     if ($_POST["solution"] == 1){
-                        echo 'BRAVO VOUS AVEZ GAGNÉ';
+                        echo '<div class="resultatReponse">BRAVO VOUS AVEZ GAGNÉ</div>';
                     }else{
-                        echo 'Dommage vous avez perdu...';
+                        echo '<div class="resultatReponse">Dommage vous avez perdu...</div>';
                     }
                 ?>
                 

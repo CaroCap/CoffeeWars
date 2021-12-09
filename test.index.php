@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coffee Wars</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/wheel.css">
     <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="./script/coffeemachine.js"></script>
 </head>
 
-<body>
+<body onload="init();" style="margin:0px;">
     <!-- div pour que la page du jeu prenne tout l'écran (  100vh ) -->
     <div id="content">
         <header>
@@ -26,6 +29,9 @@
             <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
 
         </aside>
+
+        <!-- TEST APPEL MODAL -->
+        <button class="modalClic" id="Question">MODAL Test</button>
 
         <section>
 
@@ -192,16 +198,34 @@
                     <img src="" alt="">
                 </div>
             </div>
-
-
         </footer>
 
+        <!-- MODAL + Include de la selection de la question -->
+        <div class="glass" id="modalQuestion">
+            <div class="modalFormContainer">
+                <div class="modalFormThird">
+                    <div class="modalFormSecond">
+                        <div class="modalForm">
+                            <?php
+                            include_once "./select_Question.php";
+                            ?>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MACHINE A CAFE -->
+                <div id="animation_container">
+                    <canvas id="canvas"></canvas>
+                    <div id="dom_overlay_container">
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
 
 
-
-
-        <script src="main.js"></script>
+        <script src="script/main.js"></script>
     </div>
 </body>
 
