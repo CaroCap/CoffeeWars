@@ -34,17 +34,22 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-}
-body {
-    height:2050px;
-    background-color: #381915;
-}
-@font-face {
-  font-family: bratsy ;
-  src: url(../assets/font/bratsy_script/bratsy.otf);
 }
 
+body {
+    height: 2050px;
+    background-color: #381915;
+}
+
+body {
+    background-color: #381915;
+    /* Désactivation du scroll */
+    overflow-y: hidden;
+}
+
+#content {
+    height: 100vh;
+}
 
 #container {
     display: flex;
@@ -53,13 +58,11 @@ body {
     /* align-content: center; */
     background-color: #381915;
     height: 800px;
-    width:100%;
-    padding-right:150px;
-   
+    width: 100%;
+    padding-right: 150px;
 }
 
 #board {
-   
     background-color: #381915;
     font-size: 20px;
     width: 50%;
@@ -69,8 +72,7 @@ body {
     border: 0px;
     height: 1020px;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: row;
 }
 
 #bloc1,
@@ -86,11 +88,12 @@ body {
     justify-content: center;
     /* padding-left:220px; */
 }
+
 header {
     background-color: #381915;
-    color:white;
-    
+    color: white;
 }
+
 .local1,
 .local2,
 .local3,
@@ -103,8 +106,7 @@ header {
     width: 220px;
 }
 
-.inutile
-{
+.inutile {
     /* border: 1px solid #070303; */
     height: 150px;
     width: 220px;
@@ -126,22 +128,18 @@ header {
 
 /* CSS LIQUID BUTTON  */
 
-.containerBtn {
-    /* width: 600px;
+
+/* .containerBtn {
+   width: 600px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: center; */
-}
-
-  
-
-
+    align-items: center;
+} */
 
 
 /* CSS PLAN  */
-
 
 .local1 {
     background-image: url(../assets/img/salle_cafet.png);
@@ -151,25 +149,21 @@ header {
 .local2 {
     background-image: url(../assets/img/salle_wad.png);
     background-size: cover;
-
 }
 
 .local3 {
     background-image: url(../assets/img/salle_prof.png);
     background-size: cover;
-
 }
 
 .local4 {
     background-image: url(../assets/img/salle_web.png);
     background-size: cover;
-
 }
 
 .local5 {
     background-image: url(../assets/img/salle_asr.png);
     background-size: cover;
-
 }
 
 .local6 {
@@ -179,57 +173,58 @@ header {
 .local7 {
     background-image: url(../assets/img/salle_game.png);
     background-size: cover;
-
 }
 
 #wc {
     background-image: url(../assets/img/salle_toilettes.png);
-    background-size: cover; 
-    padding-left:150px;
+    background-size: cover;
+    padding-left: 150px;
 }
 
 
 /* CSS HEADER */
-header {
-    display:flex;
-    justify-content:space-between;
-}
-#grain_cafe {
-    width:50px;
-    height:50px;
-    margin:20px;
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#grain_cafe {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
 }
 
 .texteBanner {
-    padding-top:50px;
-   color: #f47c20;
-   font-family:bratsy;
-   font-size:30px;
+    padding-top: 50px;
+    color: #f47c20;
+    font-family: bratsy;
+    font-size: 30px;
 }
+
 #banniere {
-width:350px;
+    width: 350px;
 }
 
 .bienvenue {
     background-color: #381915;
-    color:#F2493E;
-    font-family:bratsy;
-    font-size:40px;
-    padding-left:25px;
-    
+    color: #F2493E;
+    font-family: bratsy;
+    font-size: 40px;
+    padding-left: 25px;
 }
 
 .thermos {
-   padding-left:20px;
-   padding-right:-20px;
+    padding-left: 20px;
+    padding-right: -20px;
 }
 
 .Texte1 {
     color: #F2493E;
-    font-size:35px;
+    font-size: 35px;
 }
+
 .Texte2 {
     color: #8BC87A;
-    font-size:30px;
+    font-size: 30px;
 }
