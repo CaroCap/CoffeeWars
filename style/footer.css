@@ -1,0 +1,182 @@
+/* FONTS */
+
+@font-face {
+    /* bratsy (les titres) */
+    font-family: 'bratsy';
+    src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
+}
+
+@font-face {
+    /* arista (les textes paragraphes) */
+    font-family: 'arista';
+    src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
+}
+
+@font-face {
+    /* bubbleboddy (les textes paragraphes) */
+    font-family: 'bubbleboddy';
+    src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
+}
+
+
+/* Responsive */
+
+@media(max-width:992px) {
+    /*   Fin du float */
+    .flex {
+        display: block;
+    }
+}
+
+
+/* Variables */
+
+:root {
+    /* Couleurs */
+    --green: #8BC87A;
+    --eggwhite: #FDF5BD;
+    --yellow: #F3BB41;
+    --orange: #f47c20;
+    --red: #F2493E;
+    --brown: #381915;
+    /* Fonts */
+    --bratsy: "bratsy";
+    --arista: "arista";
+    --bubbleboddy: "bubbleboddy";
+}
+
+
+/* BALISES GLOBALES */
+
+footer {
+    height: 100vh;
+}
+
+footer h1 {
+    font-family: var(--bratsy);
+    color: var(--eggwhite);
+}
+
+footer h3 {
+    font-family: var(--bubbleboddy);
+    color: var(--yellow);
+}
+
+.arista {
+    font-family: var(--arista);
+}
+
+.bubbleboddy {
+    font-family: var(--bubbleboddy);
+}
+
+.flex {
+    display: flex;
+}
+
+.green {
+    color: var(--green);
+}
+
+
+/* BALISES PARTICULIERES */
+
+.codeuseSeule {
+    display: flex;
+    padding-bottom: 13px;
+}
+
+.codeuseImg {
+    border-radius: 50%;
+    width: 90px;
+}
+
+.texteCodeuse {
+    padding-left: 10px;
+}
+
+.texteCodeuse>p {
+    font-family: var(--bubbleboddy);
+}
+
+#codeusesBloc p {
+    padding-bottom: 15px;
+}
+
+#divRouge {
+    background-color: var(--red);
+    width: 450px;
+    height: 90vh;
+    position: absolute;
+    left: 70px;
+    top: 965px;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+#codeusesBloc {
+    background-color: var(--orange);
+    width: 450px;
+    height: 90vh;
+    border: 3px solid var(--brown);
+    z-index: 11;
+    position: relative;
+    border-radius: 20px;
+    top: 45px;
+    left: 100px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+.codeuseSeule {
+    display: flex;
+}
+
+.nomCodeuse {
+    color: var(--green);
+    font-family: var(--bratsy);
+    text-shadow: 0px 0px 9px #381915;
+}
+
+
+/* Paragraphe languages employés */
+
+#banniere_rouge {
+    width: 550px;
+}
+
+#languagesCode {
+    position: relative;
+    left: 195px;
+    top: 48px;
+}
+
+#languagesCode a:hover {
+    text-shadow: 0px 0px 9px var(--eggwhite);
+}
+
+#languagesCode a:visited,
+a:active,
+a:link {
+    color: var(--orange);
+}
+
+#languagesCode p>span {
+    color: var(--red);
+}
+
+ul {
+    font-family: var(--bubbleboddy);
+    color: var(--green);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#svgCode {
+    position: relative;
+    top: 0;
+    left: 250px;
+    top: 101px;
+}
