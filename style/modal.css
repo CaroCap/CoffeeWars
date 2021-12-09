@@ -183,3 +183,30 @@ body{
   filter: blur(10px);
   z-index: -1;
 } */
+
+/* MACHINE A CAFE */
+#animation_container {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  width:1024px;
+  height:768px
+  }
+
+  #canvas{
+    width:1024px;
+    height: 768px;
+    position: absolute; 
+    display: block;
+  }
+  #dom_overlay_container{
+    pointer-events:none; 
+    overflow:hidden; 
+    width:1024px; 
+    height:768px; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    display: block;
+  }
