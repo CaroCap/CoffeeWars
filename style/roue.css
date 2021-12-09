@@ -1,17 +1,35 @@
 @font-face{
     font-family: Bubbleboddy;
-    src: url(../assets/font/bubbleboddy_neue/Bubbleboddy-ExtraLightTrial.ttf);
+    src: url(Bubbleboddy-ExtraLightTrial.ttf);
 }
-
 
 *{
     box-sizing: border-box;
 }
 
-.bodyWheel{
+:root {
+    /* Couleurs */
+    --green: #8BC87A;
+    --eggwhite: #FDF5BD;
+    --yellow: #F3BB41;
+    --orange: #f47c20;
+    --red: #F2493E;
+    --brown: #381915;
+    /* Fonts */
+    --bratsy: "bratsy";
+}
+
+
+/* MEMO: On appelle les variables comme ça: 
+body{
+  color: var(--green);
+ } */
+
+
+body{
     margin: 0;
     padding: 0;
-    /* background-color: white; */
+    background-color: white;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -19,18 +37,18 @@
     overflow: hidden;
 }
 
-.containerWheel{
+.container{
     width: 500px;
     height: 500px;
-    background-color: #381915;
+    background-color: var(--brown);
     border-radius: 50%;
-    border: 15px solid #381915;
+    border: 15px solid var(--brown);
     position: relative;
     overflow: hidden;
     transition: 1s;
 }
 
-.containerWheel div{
+.container div{
     height: 50%;
     width: 200px;
     position: absolute;
@@ -48,40 +66,40 @@
     left:135px;
 }
 
-.spanWheel{
+span{
     position: absolute;
     top:10%;
 }
-.containerWheel .one{
+.container .one{
     left:50%;
-    background-color: #FDF5BD;
+    background-color: var(--eggwhite);
 }
-.containerWheel .two{
-    background-color: #F3BB41;
+.container .two{
+    background-color: var(--yellow);
     transform: rotate(45deg);
 }
-.containerWheel .three{
-    background-color: #f47c20;
+.container .three{
+    background-color: var(--orange);
     transform: rotate(90deg);
 }
-.containerWheel .four{
-    background-color: #F2493E;
+.container .four{
+    background-color: var(--red);
     transform: rotate(135deg);
 }
-.containerWheel .five{
-    background-color: #FDF5BD;
+.container .five{
+    background-color: var(--eggwhite);
     transform: rotate(180deg);
 }
-.containerWheel .six{
-    background-color: #F3BB41;
+.container .six{
+    background-color: var(--yellow);
     transform: rotate(225deg);
 }
-.containerWheel .seven{
-    background-color: #f47c20;
+.container .seven{
+    background-color: var(--orange);
     transform: rotate(270deg);
 }
-.containerWheel .eight{
-    background-color: #F2493E;
+.container .eight{
+    background-color: var(--red);
     transform: rotate(315deg);
 } 
 
@@ -90,7 +108,7 @@
     top:17%;
     left:50%;
     transform: translateX(-50%);
-    color: black;
+    color: var(--red);
 }
 
 .arrow:before{
@@ -106,13 +124,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    background-color: #381915;
+    background-color: var(--brown);
     text-transform: uppercase;
-    border: 8px solid #381915;
+    border: 8px solid var(--brown);
     font-family: 'Bubbleboddy';
     font-weight: bolder;
     font-size: 22px;
-    color: #FDF5BD ;
+    color: var(--eggwhite);
     width: 80px;
     height: 80px;
     border-radius: 50%;
