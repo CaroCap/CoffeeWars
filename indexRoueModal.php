@@ -84,6 +84,7 @@
             </div>
         </div>
         </section>
+</div>
 
         <footer id="footer">
             <!-- FLOAT -->
@@ -236,7 +237,7 @@
             </div>
         </div>
         
-</div>
+
 <script src="script/main.js"></script>
 <script src="./script/roue.js"></script>
 </body>

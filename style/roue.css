@@ -11,6 +11,7 @@
 .bodyWheel{
     margin: 0;
     padding: 0;
+    position: relative;
     /* background-color: white; */
     display:flex;
     align-items:center;
@@ -86,7 +87,7 @@
 } 
 
 .arrow{
-    position: fixed;
+    position: absolute;
     top:17%;
     left:50%;
     transform: translateX(-50%);
@@ -102,9 +103,6 @@
 
 #spin{
     position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10;
     background-color: #381915;
     text-transform: uppercase;
