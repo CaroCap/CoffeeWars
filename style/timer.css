@@ -21,18 +21,27 @@
     /* Fonts */
     --bratsy: "bratsy";
 }
-
-
 /* MEMO: On appelle les variables comme ça: 
 body{
-  color: var(--green);
- } */
+    color: var(--green);
+} */
 
 
-body{
-    width: 50vh;
-    height: 50vh;
-    
+.thermosContainer{
+    height: 50%;
+}
+
+.thermos {
+    position: relative;
+    /* width: 100%;
+	height: 100%;
+    margin-top: 0px;
+    background-image: url("../assets/img/thermos.png");
+    background-repeat: no-repeat;
+    z-index: 3; */
+}
+.imgThermos{
+    position: absolute;
 }
 .progressBar {
     position: relative;
@@ -58,11 +67,3 @@ body{
    /*  z-index: 2; */
 }
 
-.thermos {
-    width: 100%;
-	height: 100%;
-    margin-top: 0px;
-    background-image: url("../assets/img/thermos.png");
-    background-repeat: no-repeat;
-    z-index: 3;
-}
