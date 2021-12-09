@@ -1,2 +1,0 @@
-# CoffeeWars
-Hackathon Interface3
