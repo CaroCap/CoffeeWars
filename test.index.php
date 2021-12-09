@@ -66,7 +66,7 @@
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/profil_iman.png" alt="Iman Shamileva">
+                            <img class="codeuseImg" src="assets/img/profil_iman.png" alt="Iman Chamileva">
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Iman</h2>
