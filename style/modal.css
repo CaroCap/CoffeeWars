@@ -156,7 +156,10 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     border: 6px solid black;
 }
 
-.glass {
+body{
+    background-color: red;
+}
+/* .glass {
   position: relative;
   background: inherit;
   overflow: hidden;
@@ -179,4 +182,4 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
   box-shadow: inset 0 0 500px rgba(255, 255, 255, 0.4);
   filter: blur(10px);
   z-index: -1;
-}
+} */
