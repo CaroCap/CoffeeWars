@@ -1,14 +1,14 @@
-let container = document.querySelector(".container");
+let containerWheel = document.querySelector(".containerWheel");
 let btn = document.getElementById("spin");
 let number = Math.ceil(Math.random() * 1000);
 
 btn.onclick = function() {
-    container.style.transform = "rotate(" + number + "deg)";
+    containerWheel.style.transform = "rotate(" + number + "deg)";
     number += Math.ceil(Math.random() * 1000);
     let selectedDiv = []
 
     setTimeout(()=>{
-        container.childNodes.forEach((item)=>{
+        containerWheel.childNodes.forEach((item)=>{
             if(item.nodeType != 3)
             {
                 selectedDiv.push(offset(item.childNodes[0]))

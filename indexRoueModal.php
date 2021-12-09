@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Wars</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/wheel.css">
+    <link rel="stylesheet" type="text/css" href="./style/roue.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/modal.css">
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
+    <title>Wheel</title>
 </head>
-
 <body onload="init();" style="margin:0px;">
-    <!-- div pour que la page du jeu prenne tout l'écran (  100vh ) -->
-    <div id="content">
+
+<div id="content">
         <header>
             <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
             <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p>
@@ -32,13 +30,26 @@
 
         <!-- TEST APPEL MODAL -->
         <button class="modalClic" id="Question">MODAL Test</button>
-
+        
         <section>
+        <div id="container">
 
-            <div id="container">
+            <div class="bodyWheel">
+                    <button id="spin">Spin</button>
+                    <span class="arrow"></span>
+                <div class="containerWheel">
+                    <div class="one"><span class="spanWheel">W<br>C</span></div>
+                    <div class="two"><span class="spanWheel">W<br>E<br>B</span></div>
+                    <div class="three"><span class="spanWheel">G<br>A<br>M<br>E</span></div>
+                    <div class="four"><span class="spanWheel">A<br>S<br>R</span></div>
+                    <div class="five"><span class="spanWheel">P<br>R<br>O<br>F</span></div>
+                    <div class="six"><span class="spanWheel">W<br>C</span></div>
+                    <div class="seven"><span class="spanWheel">W<br>A<br>D</span></div>
+                    <div class="eight"><span class="spanWheel">C<br>A<br>F<br>E<br>T</span></div>
+                </div>
+            </div>
 
-
-                <div id="board">
+            <div id="board">
 
                     <div class="wrapper">
                         <div id="bloc1">
@@ -70,8 +81,9 @@
                     <div class="thermos">
                         <img src="assets/img/thermos.png" alt="">
                     </div>
+            </div>
+        </div>
         </section>
-
 
         <footer id="footer">
             <!-- FLOAT -->
@@ -200,6 +212,7 @@
             </div>
         </footer>
 
+
         <!-- MODAL + Include de la selection de la question -->
         <div class="glass" id="modalQuestion">
             <div class="modalFormContainer">
@@ -222,11 +235,9 @@
 
             </div>
         </div>
-
-
-
-        <script src="script/main.js"></script>
-    </div>
+        
+</div>
+<script src="script/main.js"></script>
+<script src="./script/roue.js"></script>
 </body>
-
 </html>
