@@ -156,17 +156,19 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     border: 6px solid black;
 }
 
-body{
-    background-color: red;
+#modalQuestion{
+ display: none; /*Caché par défaut et apparait grace à JS*/
 }
-/* .glass {
-  position: relative;
+
+ .glass {
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;  
   background: inherit;
   overflow: hidden;
-  width: 100%;
-  height: 70%;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
 
@@ -182,7 +184,7 @@ body{
   box-shadow: inset 0 0 500px rgba(255, 255, 255, 0.4);
   filter: blur(10px);
   z-index: -1;
-} */
+} 
 
 /* MACHINE A CAFE */
 #animation_container {

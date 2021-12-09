@@ -22,7 +22,7 @@
                     if ($_POST["solution"] == 1){
                         echo '<div class="resultatReponse">BRAVO VOUS AVEZ GAGNÉ</div>';
                     }else{
-                        echo 'Dommage vous avez perdu...</div>';
+                        echo '<div class="resultatReponse">Dommage vous avez perdu...</div>';
                     }
                 ?>
                 
