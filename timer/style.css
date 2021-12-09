@@ -9,6 +9,26 @@
     padding: 0;
 }
 
+:root {
+    /* Couleurs */
+    --green: #8BC87A;
+    --eggwhite: #FDF5BD;
+    --yellow: #F3BB41;
+    --orange: #f47c20;
+    --red: #F2493E;
+    --brown: #381915;
+    --grey: #c4c4c4;
+    /* Fonts */
+    --bratsy: "bratsy";
+}
+
+
+/* MEMO: On appelle les variables comme ça: 
+body{
+  color: var(--green);
+ } */
+
+
 body{
     width: 50vh;
     height: 50vh;
@@ -19,7 +39,7 @@ body{
     width: 200px;
     height: 27px;
     border-radius: 10px;
-    background-color: #c4c4c4;
+    background-color: var(--grey);
 	transform: rotate(-90deg);
     left: -55px;
     top:110px;
@@ -32,9 +52,9 @@ body{
     font-size: 15px;
     text-align: center;
     writing-mode: vertical-rl;
-    color: #F2493E;
+    color: var(--red);
     line-height: 27px; /* same as #progressBar height if we want text middle aligned */
-    background-color: #302020;
+    background-color: var(--brown);
    /*  z-index: 2; */
 }
 
