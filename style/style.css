@@ -35,18 +35,22 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-@font-face {
-  font-family: bratsy ;
-  src: url(../assets/font/bratsy_script/bratsy.otf);
+
+body {
+    background-color: #381915;
+    /* Désactivation du scroll */
+    /*  overflow-y: hidden; //TODO à activer */
 }
 
+#content {
+    height: 100vh;
+}
 
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #381915;
     height: 800px;
 }
 
@@ -105,16 +109,15 @@ body{
 
 /* CSS LIQUID BUTTON  */
 
-.containerBtn {
-    /* width: 600px;
+
+/* .containerBtn {
+   width: 600px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: center; */
-}
-
-  
+    align-items: center;
+} */
 
 .btn {
     width: 150px;
