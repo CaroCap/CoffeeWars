@@ -1,5 +1,21 @@
-// MODALS
+// CONSTANTES DEPART : Lancement du jeu
+const scoreStart = 0;
+// Mise au max du Timer
+const heuresStart = 0;
+const minutesStart = 6;
+const secondesStart = 0;
+const finPartieStart = false;
 
+
+let nameRoue = 'web';
+
+function lancementJeu(){
+    
+}
+
+
+
+// MODALS
 //TABLEAU DES MODALS
 let choixModals = document.getElementsByClassName('modalClic');
 for (let indexModal = 0; indexModal < choixModals.length; indexModal++) {
