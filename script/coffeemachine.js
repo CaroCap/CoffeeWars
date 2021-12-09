@@ -114,7 +114,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CoffeeMachinelastchangesmachine.png", id:"CoffeeMachinelastchangesmachine"}
+		{src:"./assets/img/CoffeeMachinelastchangesmachine.png", id:"CoffeeMachinelastchangesmachine"}
 	],
 	preloads: []
 };
