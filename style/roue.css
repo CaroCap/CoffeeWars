@@ -93,12 +93,11 @@
     /* transform: translateX(-50%); */
     color: #8BC87A;
     z-index:11;
-   
     background-image:url(https://media.giphy.com/media/9PcEY5kYpR3QrQxxhL/giphy.gif);
     background-size: cover;
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text; 
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text; 
 }
 
 .arrow:before{
