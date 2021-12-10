@@ -1,6 +1,7 @@
 @font-face {
-    font-family: "Bubbleboddy";
-    src: url(../assets/font/bubbleboddy_neue/Bubbleboddy-ExtraLightTrial.ttf);
+    /* bubbleboddy (les textes paragraphes)  */
+   font-family: 'bubbleboddy';
+   src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
 }
 
 @font-face {
@@ -49,7 +50,7 @@
     justify-content: center;
     font-size: 15px;
     font-weight: bolder;
-    font-family: 'bubble club';
+    font-family: 'bubbleboddy';
     color: black;
     left: 135px;
 }
@@ -115,7 +116,7 @@
 
 .arrow:before {
     content: "V";
-    font-family: 'Bubbleboddy';
+    font-family: 'bubbleboddy';
     font-weight: bolder;
     font-size: 50px;
 }
@@ -129,7 +130,7 @@
     background-color: #381915;
     text-transform: uppercase;
     border: 8px solid #381915;
-    font-family: 'Bubbleboddy';
+    font-family: 'bubbleboddy';
     font-weight: bolder;
     font-size: 15px;
     color: #FDF5BD;

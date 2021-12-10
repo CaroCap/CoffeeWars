@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" type="text/css" href="./style/roue.css">
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
+     <!-- script main -->
+    <script src="script/main.js" defer></script>
+     <!-- script wheel -->
+    <script src="./script/roue.js" defer></script>
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
@@ -289,10 +293,5 @@
 
         </div>
     </div>
-
-
-    <script src="script/main.js"></script>
-    <script src="./script/roue.js"></script>
 </body>
-
 </html>

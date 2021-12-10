@@ -1,15 +1,16 @@
 /* FONTS */
 @font-face {
     font-family: 'bratsy' ;
-    src: url(../assets/font/bratsy_script/bratsy.otf);
+    src: url('../assets/font/bratsy_script/bratsy.otf');
 }
 @font-face {
 font-family: 'aristaThin';
-src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
+src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
 }
 @font-face {
-    font-family: 'bubbleboddy';
-    src: url(../assets/font/bubbleboddy_neue/bubbleboddyneue-regular\ trial.ttf);
+  /* bubbleboddy (les textes paragraphes)  */
+ font-family: 'bubbleboddy';
+ src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
 }
 
 @font-face {

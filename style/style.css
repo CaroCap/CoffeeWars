@@ -1,9 +1,30 @@
 /* FONTS */
 
+
 @font-face {
+    /*  bratsy (les titres)  */
+    font-family: 'bratsy';
+    src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
+}
+
+@font-face {
+    /*  arista (les textes paragraphes)  */
+    font-family: 'arista';
+    src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
+}
+
+@font-face {
+     /* bubbleboddy (les textes paragraphes)  */
+    font-family: 'bubbleboddy';
+    src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
+}
+
+@font-face {
+    /* bubbleboddy (les textes paragraphes) */
     font-family: 'bubble club';
     src: url('../assets/font/bubble_club/');
 }
+
 
 
 /* Variables */
@@ -226,7 +247,7 @@ header {
 .texteBanner {
     padding-top: 50px;
     color: #f47c20;
-    font-family: bratsy;
+    font-family: var(--bratsy);
     font-size: 30px;
 }
 
@@ -237,7 +258,7 @@ header {
 .bienvenue {
     background-color: #381915;
     color: #F2493E;
-    font-family: bratsy;
+    font-family: var(--bratsy);
     font-size: 40px;
     padding-left: 25px;
 }
@@ -245,13 +266,13 @@ header {
 .Texte1 {
     color: #F2493E;
     font-size: 35px;
-    font-style: bratsy;
+    font-style: var(--bratsy);
 }
 
 .Texte2 {
     color: #8BC87A;
     font-size: 30px;
-    font-style: var(--font);
+    font-style: var(--bratsy);
 }
 
 
