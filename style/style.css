@@ -245,7 +245,7 @@ header {
 #scoreTitre{
     font-family: var(--bratsy);
     font-size: 50px;
-    color: var(--eggwhite);
+    color: var(--brown);
 }
 #grainsContainer{
     display: flex;
@@ -254,10 +254,78 @@ header {
 #scorePoints{
     font-family: var(--arista);
     font-size: 50px;
-    color: var(--eggwhite);
+    color: var(--brown);
 
 }
 #grainsCaffeScore{
     width: 50px;
     height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+/* MODAL + THERMOS */
+
+
+.modalFormContainer2 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 350px;
+}
+
+
+
+.modalFormSecond2 {
+
+    border: 5px solid #c29430;
+    width: 300px;
+    height: 400px;
+    border-radius: 8%;
+    background-color: #f3bb41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 70;
+    transform: translate(-20px, 20px);
+}
+
+.modalForm2 {
+
+    border: 5px solid #c2631b;
+    width: 300px;
+    height: 400px;
+    border-radius: 8%;
+    background-color: #FDF5BD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    transform: translate(-20px, 10px);
+}
+
+.containerDroite2 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+}
+
+
+.imgThermos {
+
+    
 }
