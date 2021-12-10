@@ -140,6 +140,12 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     margin-left: 15px;
 }
 
+.imgToilet{
+  width:90%;
+  padding:10px;
+
+}
+
 .btnRadio {
     -webkit-appearance: none;
     -moz-appearance: none;

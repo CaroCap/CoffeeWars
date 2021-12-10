@@ -26,7 +26,9 @@
             <div class="modalFormThird">
                 <div class="modalFormSecond">
                     <div class="modalForm">
-                        <p class="intituleQuestion">Ici c'est au cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</p>
+                        <h5 class="titreQuestion">Pipi Fountain</h5>
+                        <h6 class="intituleQuestion">Ici c'est au cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</h6>
+                        <img  class="imgToilet" src="assets/img/bobsBurger.jpg" alt="Bob's burgers">
                     </div>
                 </div>
             </div>
