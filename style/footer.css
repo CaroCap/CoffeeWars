@@ -18,6 +18,12 @@
     src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
 }
 
+@font-face {
+    /* bubbleboddy (les textes paragraphes) */
+    font-family: 'bubble club';
+    src: url('../assets/font/bubble_club/');
+}
+
 
 /* Responsive */
 
@@ -42,7 +48,7 @@
     /* Fonts */
     --bratsy: "bratsy";
     --arista: "arista";
-    --bubbleboddy: "bubbleboddy";
+    --font: "bubble club";
 }
 
 
@@ -58,7 +64,7 @@ footer h1 {
 }
 
 footer h3 {
-    font-family: var(--bubbleboddy);
+    font-family: var(--font);
     color: var(--yellow);
 }
 
@@ -67,7 +73,7 @@ footer h3 {
 }
 
 .bubbleboddy {
-    font-family: var(--bubbleboddy);
+    font-family: var(--font);
 }
 
 .flex {
@@ -96,7 +102,7 @@ footer h3 {
 }
 
 .texteCodeuse>p {
-    font-family: var(--bubbleboddy);
+    font-family: var(--font);
 }
 
 #codeusesBloc p {
@@ -168,7 +174,7 @@ a:link {
 }
 
 ul {
-    font-family: var(--bubbleboddy);
+    font-family: var(---font);
     color: var(--green);
     padding-top: 15px;
     padding-bottom: 15px;

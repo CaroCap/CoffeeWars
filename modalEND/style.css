@@ -1,0 +1,122 @@
+@font-face {
+    /* bubbleboddy (les textes paragraphes) */
+    font-family: 'bubble club';
+    src: url('../assets/font/bubble_club/');
+}
+
+:root {
+    /* Couleurs */
+    --green: #8BC87A;
+    --eggwhite: #FDF5BD;
+    --yellow: #F3BB41;
+    --orange: #f47c20;
+    --red: #F2493E;
+    --brown: #381915;
+    /* Fonts */
+    --bratsy: "bratsy";
+    --arista: "aristaThin";
+    --font: "bubble club";
+}
+
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #381915 ;
+    font-family: var(--font);
+    font-size: 25px;
+}
+
+a {
+    color: #F3BB41;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 15px 45px;
+    border: 1px solid #F3BB41;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 2em;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #F3BB41;
+    color: #381915 ;
+}
+
+.popup {
+    position: fixed;
+    padding: 10px;
+    width: 800px;
+    height: 500px;
+    border-radius: 2.5rem;
+    top: 50%;
+    left: 50%;
+    color: #381915 ;
+    transform: translate(-50%, -50%);
+    background-color: #F3BB41;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+}
+
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.popup .close {
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    padding: 5px;
+    color: #381915;
+    transition: color .3s;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.popup .close:hover {
+    color: #F2493E;
+}
+
+.close-popup {
+    background-color: #381915;
+    cursor: default;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility 0s linear .5s;
+}
+
+.popup:target + .close-popup {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+h2 {
+    margin-top: 10%;
+}
+
+p {
+    margin-top: 5%;
+}
