@@ -26,7 +26,7 @@
             <div class="modalFormThird">
                 <div class="modalFormSecond">
                     <div class="modalForm">
-                        <p>??????Ici c'est oú cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</p>
+                        <p class="intituleQuestion">Ici c'est au cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</p>
                     </div>
                 </div>
             </div>
