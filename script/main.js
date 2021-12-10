@@ -107,7 +107,7 @@ btn.onclick = function() {
         // setTimeOut( function() {console.log("7 secondes, c'est assez ?");}, 7000); 
 
         // ! Utiliser le typeChoisiPropre pour la question
-        // Ouvrir Modal Question
+        // Ouvrir Modal
         if(typeChoisiPropre == 'wc'){
             ouvrirModal('modalWC');
         }
@@ -124,6 +124,12 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft, name : el.innerHTML, item : el }
 }
+
+//Fermer Modal toilette
+document.getElementById("btnToilette").addEventListener("click", (event)=>{
+    event.preventDefault(); 
+    document.getElementById("modalWC").style.display = 'none';
+});
 
 // 3) REPONSE MODAL -> Validation réponse -> True/False ? Score++ & Fermeture MODAL 
 //+ INFO perdu Gagné
@@ -172,11 +178,33 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
     
 });
 
+const PRIX3 = 10;
+const PRIX2 = 20;
+const PRIX1 = 30;
+
+
+
 // 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
 //      + Ouverture Modal FIN avec total score et phrase selon score
 function gameOver(){
+    score = sessionStorage.getItem("score");
     document.getElementById('spin').setAttribute('disabled', '');
-    ouvrirModal('')
+    ouvrirModal('modalFIN')
+    if(score <= PRIX3){
+        document.getElementById('PRIX').innerHTML='Un bon jus de chausette 🧦';
+        document.getElementById('scoreFin').innerHTML=score;
+        document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>";
+    }
+    else if (score <= PRIX2) {
+        document.getElementById('PRIX').innerHTML='Un classique Americano ☕️';
+        document.getElementById('scoreFin').innerHTML=score;
+        document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>";
+    }
+    else if (score >= PRIX2){
+        document.getElementById('PRIX').innerHTML='Un Ristretto Italiano 🇮🇹';
+        document.getElementById('scoreFin').innerHTML=score;
+        document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>";
+    }
 }
 
 // FONCTION TIMER
