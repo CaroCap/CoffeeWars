@@ -6,8 +6,13 @@ const minutesStart = 6;
 const secondesStart = 0;
 const finPartieStart = false;
 
+// Variables
+let score = scoreStart;
+// let nameRoue = 'web';
 
-let nameRoue = 'web';
+// Emplacements
+let placeScore = document.getElementById('scorePoints');
+placeScore.innerHTML = score;
 
 function lancementJeu(){
     

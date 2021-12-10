@@ -2,8 +2,16 @@
 
 @font-face {
     /* bratsy (les titres) */
-    font-family: 'bratsy';
+    font-family: 'Bratsy';
     src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
+}
+@font-face{
+    font-family: Bubbleboddy;
+    src: url(../assets/font/bubbleboddy_neue/Bubbleboddy-ExtraLightTrial.ttf);
+}
+@font-face{
+    font-family: Arista;
+    src: url(../assets/font/arista_pro/Arista-Pro-Light-trial.ttf);
 }
 
 
@@ -18,10 +26,10 @@
     --red: #F2493E;
     --brown: #381915;
     /* Fonts */
-    --bratsy: "bratsy";
+    --bratsy: "Bratsy";
+    --bubble: "Bubbleboddy";
+    --arista: "Arista";
 }
-
-
 /* MEMO: On appelle les variables comme ça: 
 body{
   color: var(--green);
@@ -218,4 +226,38 @@ header {
 .Texte2 {
     color: #8BC87A;
     font-size: 30px;
+}
+
+/* SCORES */
+.containerDroite{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}
+.scoreContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+}
+#scoreTitre{
+    font-family: var(--bratsy);
+    font-size: 50px;
+    color: var(--eggwhite);
+}
+#grainsContainer{
+    display: flex;
+    justify-content: center;
+}
+#scorePoints{
+    font-family: var(--arista);
+    font-size: 50px;
+    color: var(--eggwhite);
+
+}
+#grainsCaffeScore{
+    width: 50px;
+    height: 50px;
 }
