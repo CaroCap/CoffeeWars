@@ -234,7 +234,6 @@
         </div>
     </footer>
 
-
     <!-- MODAL + Include de la selection de la question -->
     <div class="glass" id="modalQuestion">
         <div class="modalFormContainer">

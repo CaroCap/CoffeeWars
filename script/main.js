@@ -7,7 +7,11 @@ const timeTotalStart = 60;
 const finPartieStart = false;
 
 // Variables
-let score = scoreStart;
+let score = sessionStorage.getItem("score");
+//sessionStorage.setItem("score", score)
+//sessionStorage.getItem("score")
+//sessionStorage.removeItem("score")
+                    
 let timeLeft = timeLeftStart;
 let timeTotal = timeTotalStart;
 // let nameRoue = 'web';
@@ -100,7 +104,7 @@ btn.onclick = function() {
         // ! Enlever le bright de la salle après la question
         
         // ! Trouver un moyen de laisser quelques secondes pour illuminer la salle
-        // Set timeout ???
+        // setTimeOut( function() {console.log("7 secondes, c'est assez ?");}, 7000); 
 
         // ! Utiliser le typeChoisiPropre pour la question
         // Ouvrir Modal Question
@@ -112,6 +116,7 @@ btn.onclick = function() {
         }
     },1500);
 }
+
 // Suite fonction Roue
 function offset(el) {
     var rect = el.getBoundingClientRect(),
@@ -137,15 +142,22 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
                 // Si bonne réponse (xhr.responseText = le résultat de la value de notre form)
                 //! Finir ce qui se passe quand gagné
                 if (xhr.responseText == 1){
-                    document.getElementById("scorePoints").innerHTML = score+1;
-                    document.getElementById("modalQuestion").style.display = 'none';
+                    //sessionStorage.getItem("score")
+                    //sessionStorage.removeItem("score")
+                    
+                    score = score +1;
+                    sessionStorage.setItem("score", score)
+
+                    document.getElementById("scorePoints").innerHTML = score;
+                    fermerModal("modalQuestion");
+                    location.reload();
                 }
                 // Si mauvaise réponse
                 //! Finir ce qui se passe quand perdu
 
                 else{
                     // document.getElementById("scorePoints").innerHTML = 2;
-                    document.getElementById("modalQuestion").style.display = 'none';
+                    fermerModal("modalQuestion");
                 }
             }
         }
@@ -187,4 +199,9 @@ function ouvrirModal(idModal){
     // modalID = "modal"+this.id;
     modal = document.getElementById(idModal);
     modal.style.display = "block";
+}
+
+function fermerModal(iModal){
+    modal = document.getElementById(idModal);
+    modal.style.display = "none";
 }
