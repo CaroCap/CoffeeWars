@@ -1,3 +1,24 @@
+@font-face {
+    /* bubbleboddy (les textes paragraphes) */
+    font-family: 'bubble club';
+    src: url('../assets/font/bubble_club/');
+}
+
+:root {
+    /* Couleurs */
+    --green: #8BC87A;
+    --eggwhite: #FDF5BD;
+    --yellow: #F3BB41;
+    --orange: #f47c20;
+    --red: #F2493E;
+    --brown: #381915;
+    /* Fonts */
+    --bratsy: "bratsy";
+    --arista: "aristaThin";
+    --font: "bubble club";
+}
+
+
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -10,7 +31,7 @@ body {
     height: 100vh;
     text-align: center;
     background-color: #381915 ;
-    font-family: 'Bubbleboddy';
+    font-family: var(--font);
     font-size: 25px;
 }
 

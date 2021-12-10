@@ -12,6 +12,11 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     src: url(../assets/font/bubbleboddy_neue/bubbleboddyneue-regular\ trial.ttf);
 }
 
+@font-face {
+  font-family: 'bubble club';
+  src: url('../assets/font/bubble_club/');
+}
+
 /* Variables */
 :root {
     /* Couleurs */
@@ -24,7 +29,7 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     /* Fonts */
     --bratsy: "bratsy";
     --arista: "aristaThin";
-    --bubbleboddy: "bubbleboddy";
+    --font: "bubble club";
 }
 
 * {
@@ -118,7 +123,7 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
   justify-content: center;
 }
 .intituleQuestion{
-    font-family: var(--arista);
+    font-family: var(--font);
     font-size: 20px;
     text-align: justify;
     margin: 0 20px 0 20px;
@@ -129,7 +134,7 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     text-align: left;
 }
 .intituleReponse{
-    font-family: var(--arista);
+    font-family: var(--font);
     font-size: 20px;
     text-align: left;
     margin-left: 15px;

@@ -3,6 +3,11 @@
     src: url(../assets/font/bratsy_script/bratsy.otf);
 }
 
+@font-face {
+    font-family: 'bubble club';
+    src: url('../assets/font/bubble_club/');
+  }
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -20,6 +25,7 @@
     --grey: #c4c4c4;
     /* Fonts */
     --bratsy: "bratsy";
+    --font: "bubble club";
 }
 /* MEMO: On appelle les variables comme ça: 
 body{
@@ -58,7 +64,7 @@ body{
 
 .countdown {
     height: 27px;
-    font-family: 'bratsy';
+    font-family: var(--font);
     font-size: 15px;
     text-align: center;
     writing-mode: vertical-rl;
