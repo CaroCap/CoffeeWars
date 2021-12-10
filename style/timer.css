@@ -28,7 +28,8 @@ body{
 
 
 .thermosContainer{
-    height: 50%;
+    height: 200px;
+    margin: auto;
 }
 
 .thermos {

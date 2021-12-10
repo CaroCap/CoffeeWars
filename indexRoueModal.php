@@ -59,7 +59,6 @@
                 </div>
 
                 <div id="board">
-
                     <div class="wrapper">
                         <div id="bloc1">
                             <div class="inutile"></div>
@@ -87,11 +86,20 @@
                     </div>
                 </div>
 
-                <div class="thermosContainer">
-                    <div class="thermos">
-                        <img class="imgThermos" src="./assets/img/thermos.png" alt="thermos">
-                        <div class="progressBar" id="progressBar">
-                            <div class="countdown" id="countdown"></div>
+                <div class="containerDroite">
+                    <div class="thermosContainer">
+                        <div class="thermos">
+                            <img class="imgThermos" src="./assets/img/thermos.png" alt="thermos">
+                            <div class="progressBar" id="progressBar">
+                                <div class="countdown" id="countdown"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scoreContainer">
+                        <span id="scoreTitre">Score</span>
+                        <div id="grainsContainer">
+                            <span id="scorePoints"></span>
+                            <img id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
                         </div>
                     </div>
                 </div>
