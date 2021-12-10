@@ -27,7 +27,13 @@
         <header>
             <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
             <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p>
-            <a href="#footer"> <img id="grain_cafe" src="assets/img/grain_cafe.png" alt=""> </a>
+            
+            <div id="blocGrainCafe">
+                <a href="#footer">
+                    <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                    <p class="texteGrainCafe">Qui sommes nous ?</p>
+                </a>
+            </div>
 
         </header>
 
@@ -39,6 +45,8 @@
 
         <!-- TEST APPEL MODAL -->
         <button class="modalClic" id="Question">MODAL Test</button>
+        <!-- Bouton pour lancer le jeu  -->
+        <button id="btnStart">Commencer la partie </button>
 
         <section>
             <div id="container">
@@ -170,6 +178,13 @@
     </div>
 
     <footer id="footer">
+        <!-- Icone des grains de café qui ramène au jeu -->
+        <div id="divGrainCafeFooter">
+            <a href="#">
+                <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                <p class="texteGrainCafeFooter">Retour au Jeu</p>
+            </a>
+        </div>
         <!-- FLOAT -->
         <div class="flex">
             <!-- DIV CODEUSES -->
@@ -262,7 +277,7 @@
                     <span>
                         &#x2B62;
                     </span>
-                    <a class="bubbleboddy" href="">Voir le code sur Github</a>
+                    <a class="bubbleboddy" href="https://github.com/CaroCap/CoffeeWars" target="blank">Voir le code sur Github</a>
                 </p>
                 <p>
                     <!-- SVG Balises -->
