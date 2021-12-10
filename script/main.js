@@ -7,7 +7,12 @@ const timeTotalStart = 180;
 const finPartieStart = false;
 
 // Variables
-let score = parseInt(sessionStorage.getItem("score"));
+if (score == NaN){
+    let score=0;
+}
+else{
+    score = sessionStorage.getItem("score");
+}
 //sessionStorage.setItem("score", score)
 //sessionStorage.getItem("score")
 //sessionStorage.removeItem("score")
