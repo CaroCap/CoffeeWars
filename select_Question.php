@@ -45,7 +45,7 @@ $managerReponse = new ReponseManager($bdd);
 $listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
 // Créer formulaire réponses
 ?>
-<form action="./traitement_Question.php" method="post">
+<form id="formQuestion">
         <div class="divReponses">
                 <?php
                 $numeroReponse = 1;
@@ -58,5 +58,7 @@ $listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
                 };
                 ?>
         </div>
-        <button type="submit" class="btnModal">Valider</button>
+        <button id="btnValider" class="btnModal">Valider</button>
 </form>
+
+<script src="./script/main.js"></script>

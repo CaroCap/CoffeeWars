@@ -99,12 +99,17 @@ btn.onclick = function() {
         document.getElementById(typeChoisiPropre).classList.add("bright");
         // ! Enlever le bright de la salle après la question
         
-
         // ! Trouver un moyen de laisser quelques secondes pour illuminer la salle
+        // Set timeout ???
 
-        // ! SI WC ouvrir un autre MODAL
+        // ! Utiliser le typeChoisiPropre pour la question
         // Ouvrir Modal Question
-        ouvrirModal('modalQuestion');
+        if(typeChoisiPropre == 'wc'){
+            ouvrirModal('modalWC');
+        }
+        else{
+            ouvrirModal('modalQuestion');
+        }
     },1500);
 }
 // Suite fonction Roue
@@ -115,10 +120,48 @@ function offset(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft, name : el.innerHTML, item : el }
 }
 
-// 3) REPONSE MODAL -> Validation réponse -> True/False ? Score++ & Fermeture MODAL
+// 3) REPONSE MODAL -> Validation réponse -> True/False ? Score++ & Fermeture MODAL 
+//+ INFO perdu Gagné
 
+// Ajouter événement sur bouton valider du formulaire du modal
+document.getElementById("btnValider").addEventListener("click", (event)=>{
+    event.preventDefault(); 
+    
+    // Vérifier réponse et modifier score
+    var xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState == 4) {
+            // Si le formulaire a bien été envoyé status = 200
+            if (xhr.status == 200) {
+                // Si bonne réponse (xhr.responseText = le résultat de la value de notre form)
+                //! Finir ce qui se passe quand gagné
+                if (xhr.responseText == 1){
+                    document.getElementById("scorePoints").innerHTML = score+1;
+                    document.getElementById("modalQuestion").style.display = 'none';
+                }
+                // Si mauvaise réponse
+                //! Finir ce qui se passe quand perdu
 
+                else{
+                    // document.getElementById("scorePoints").innerHTML = 2;
+                    document.getElementById("modalQuestion").style.display = 'none';
+                }
+            }
+        }
+    }
+    let formulaire = new FormData (document.getElementById("formQuestion"));
+    xhr.open("POST", "./traitement_Question.php");
+    xhr.send(formulaire);
+    
+});
 
+// 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
+//      + Ouverture Modal FIN avec total score et phrase selon score
+function gameOver(){
+    document.getElementById('spin').setAttribute('disabled', '');
+    ouvrirModal('')
+}
 
 // FONCTION TIMER
 function progress(timeleft, timetotal, $element) {
@@ -130,19 +173,14 @@ function progress(timeleft, timetotal, $element) {
             progress(timeleft - 1, timetotal, $element);
         }, 1000);
     }
+    else{
+        gameOver('modalFIN');
+    }
 };
 
 // MODALS
-//TABLEAU DES MODALS
-let choixModals = document.getElementsByClassName('modalClic');
-for (let indexModal = 0; indexModal < choixModals.length; indexModal++) {
-    choixModals[indexModal].addEventListener("click", ouvrirModal);
-}
-
 // Get the modal
 let modal;
-// let modalID = "";
-
 function ouvrirModal(idModal){
     // event.preventDefault();
     // Récupérer le nom de l'id du clic pour pouvoir le mettre dans le modal et ouvrir le bon modal
