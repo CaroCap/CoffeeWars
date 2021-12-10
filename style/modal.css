@@ -129,7 +129,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   justify-content: center;
 }
 .intituleQuestion{
-    font-family: var(--font);
+    font-family: 'roboto';
     font-size: 20px;
     text-align: justify;
     margin: 0 20px 0 20px;
@@ -140,7 +140,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
     text-align: left;
 }
 .intituleReponse{
-    font-family: var(--font);
+    font-family: 'roboto';
     font-size: 20px;
     text-align: left;
     margin-left: 15px;
