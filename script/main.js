@@ -7,26 +7,25 @@ const timeTotalStart = 180;
 const finPartieStart = false;
 
 // Variables
+let score;
+//sessionStorage.setItem("score", score)
+//sessionStorage.getItem("score")
+//sessionStorage.removeItem("score")
+
+let timeLeft = timeLeftStart;
+let timeTotal = timeTotalStart;
+
+// Emplacements
+let placeScore = document.getElementById('scorePoints');
+let placeBtnStart = document.getElementById('btnStart')
+
+// Initialisation Scores
 if (score == NaN){
     let score = 0;
 }
 else{
     score = parseInt(sessionStorage.getItem("score"));
 }
-//sessionStorage.setItem("score", score)
-//sessionStorage.getItem("score")
-//sessionStorage.removeItem("score")
-                    
-let timeLeft = timeLeftStart;
-let timeTotal = timeTotalStart;
-// let nameRoue = 'web';
-
-// Emplacements
-let placeScore = document.getElementById('scorePoints');
-let placeBtnStart = document.getElementById('btnStart')
-
-// Bouton
-
 placeScore.innerHTML = score;
 
 // LANCEMENT PARTIE
@@ -38,11 +37,11 @@ placeScore.innerHTML = score;
 // 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
 //      + Ouverture Modal FIN avec total score et phrase selon score
 
-// ! EVENTS 
-// ? BOUTON JOUER -> LANCEMENT PARTIE (Showme, Timer)
-placeBtnStart.addEventListener("click", lancementJeu);
+
 
 // 1) BOUTON PLAY = Lancement partie -> lancement Chrono + possibilité de Spiner la roue (au départ disabled)
+// ? BOUTON JOUER -> LANCEMENT PARTIE (Showme, Timer)
+placeBtnStart.addEventListener("click", lancementJeu);
 function lancementJeu(event){
     // LANCEMENT TIMER
     progress(timeLeft, timeTotal, $('#progressBar'));
