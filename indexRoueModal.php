@@ -49,7 +49,7 @@
         </aside>
 
         <!-- TEST APPEL MODAL -->
-        <button class="modalClic" id="Question">MODAL Test</button>
+        <!-- <button class="modalClic" id="Question">MODAL Test</button> -->
         <!-- Bouton pour lancer le jeu  -->
         <button id="btnStart">Commencer la partie </button>
 
