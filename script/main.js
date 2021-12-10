@@ -7,7 +7,7 @@ const timeTotalStart = 60;
 const finPartieStart = false;
 
 // Variables
-let score = sessionStorage.getItem("score");
+let score = parseInt(sessionStorage.getItem("score"));
 //sessionStorage.setItem("score", score)
 //sessionStorage.getItem("score")
 //sessionStorage.removeItem("score")
@@ -149,15 +149,19 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
                     sessionStorage.setItem("score", score)
 
                     document.getElementById("scorePoints").innerHTML = score;
-                    fermerModal("modalQuestion");
+                    // fermerModal("modalQuestion");
+                    document.getElementById("modalQuestion").style.display = 'none';
+
                     location.reload();
                 }
+
                 // Si mauvaise réponse
                 //! Finir ce qui se passe quand perdu
-
                 else{
                     // document.getElementById("scorePoints").innerHTML = 2;
-                    fermerModal("modalQuestion");
+                    // fermerModal("modalQuestion");
+                    document.getElementById("modalQuestion").style.display = 'none';
+                    location.reload();
                 }
             }
         }
