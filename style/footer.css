@@ -109,7 +109,7 @@ footer h3 {
     height: 90vh;
     position: absolute;
     left: 76px;
-    top: 949px;
+    top: 962px;
     z-index: 10;
     border-radius: 20px;
 }
@@ -145,6 +145,7 @@ footer h3 {
 
 #banniere_rouge {
     width: 550px;
+    padding-bottom: 50px;
 }
 
 #languagesCode {
@@ -179,4 +180,24 @@ ul {
     top: 0;
     left: 250px;
     top: 101px;
+}
+
+.texteGrainCafeFooter {
+    display: none;
+    font-family: var(--bratsy);
+    color: var(--eggwhite);
+    font-size: 16px;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+}
+
+#divGrainCafeFooter {
+    position: absolute;
+    top: 103vh;
+    right: 32px;
+}
+
+#divGrainCafeFooter:hover .texteGrainCafeFooter {
+    display: block;
 }

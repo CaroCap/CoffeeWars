@@ -15,7 +15,7 @@
     <script src="./script/coffeemachine.js"></script>
     <!-- script timer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./script/timer.js"></script>  
+    <script src="./script/timer.js"></script>
     <title>Coffe Wars</title>
     <!-- Icone Onglet -->
     <link rel="icon" type="image/x-icon" href="./assets/img/grain_cafe.png" />
@@ -27,7 +27,13 @@
         <header>
             <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
             <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p>
-            <a href="#footer"> <img id="grain_cafe" src="assets/img/grain_cafe.png" alt=""> </a>
+            
+            <div id="blocGrainCafe">
+                <a href="#footer">
+                    <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                    <p class="texteGrainCafe">Qui sommes nous ?</p>
+                </a>
+            </div>
 
         </header>
 
@@ -60,7 +66,8 @@
                     </div>
                 </div>
 
-                <div id="board"> <!-- //TODO Cette div est trop basse mais je ne sais pas pourquoi (Lison) -->
+                <div id="board">
+                    <!-- //TODO Cette div est trop basse mais je ne sais pas pourquoi (Lison) -->
 
                     <div class="wrapper">
                         <div id="bloc1">
@@ -102,6 +109,13 @@
     </div>
 
     <footer id="footer">
+        <!-- Icone des grains de café qui ramène au jeu -->
+        <div id="divGrainCafeFooter">
+            <a href="#">
+                <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                <p class="texteGrainCafeFooter">Retour au Jeu</p>
+            </a>
+        </div>
         <!-- FLOAT -->
         <div class="flex">
             <!-- DIV CODEUSES -->

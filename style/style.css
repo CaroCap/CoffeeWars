@@ -44,6 +44,7 @@ body {
     background-color: #381915;
     /* Désactivation du scroll */
     /* overflow-y: hidden; */
+    overflow-x: hidden;
 }
 
 #container {
@@ -67,10 +68,15 @@ body {
     /* height: 1020px; */
     display: flex;
     flex-direction: row;
+    /* Fix le bug de la taille des images qui dépassaient sur le footer */
+    position: relative;
+    top: -102px;
 }
 
 #content {
     height: 100vh;
+    padding-top: 20px;
+    padding-left: 40px;
 }
 
 #bloc1,
@@ -243,4 +249,21 @@ header {
 .Texte2 {
     color: #8BC87A;
     font-size: 30px;
+}
+
+
+/* Pour que le texte "Qui sommes-nous ?" apparaisse au hover des Grains de café */
+
+.texteGrainCafe {
+    display: none;
+    font-family: var(--bratsy);
+    color: var(--eggwhite);
+    font-size: 16px;
+    position: absolute;
+    top: 92px;
+    right: 0px;
+}
+
+#blocGrainCafe:hover .texteGrainCafe {
+    display: block;
 }
