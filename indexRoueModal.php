@@ -15,7 +15,7 @@
     <script src="./script/coffeemachine.js"></script>
     <!-- script timer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./script/timer.js"></script>  
+    <script src="./script/timer.js"></script>
     <title>Coffee Wars</title>
     <!-- Icone Onglet -->
     <link rel="icon" type="image/x-icon" href="./assets/img/grain_cafe.png" />
@@ -27,7 +27,7 @@
         <header>
             <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
             <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p>
-            
+
             <div id="blocGrainCafe">
                 <a href="#footer">
                     <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
@@ -97,83 +97,38 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class="modalFormContainer2">
-            <div class="modalFormThird2">
-                <div class="modalFormSecond2">
-                    <div class="modalForm2">
-                      
-                    <div class="containerDroite2">
-                    <div class="thermosContainer">
-                        <div class="thermos">
-                            <img class="imgThermos" src="./assets/img/thermos.png" alt="thermos">
-                            <div class="progressBar" id="progressBar">
-                                <div class="countdown" id="countdown"></div>
+                    <div class="modalFormThird2">
+                        <div class="modalFormSecond2">
+                            <div class="modalForm2">
+                                <span id="scoreTitre">Score</span>
+
+                                <div class="containerDroite2">
+                                    <div class="thermosContainer">
+                                        <div class="thermos">
+                                            <img class="imgThermos" src="./assets/img/thermos.png" alt="thermos">
+                                            <div class="progressBar" id="progressBar">
+                                                <div class="countdown" id="countdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scoreContainer">
+                                        <div id="grainsContainer">
+                                            <span id="scorePoints">0</span>
+                                            <img id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
-                    <div class="scoreContainer">
-                        <span id="scoreTitre">Score</span>
-                        <div id="grainsContainer">
-                            <span id="scorePoints"></span>
-                            <img id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
-                        </div>
-                    </div>
+
+
+
+
                 </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
         </section>
     </div>
 

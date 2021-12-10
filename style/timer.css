@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
     font-family: bratsy;
     src: url(../assets/font/bratsy_script/bratsy.otf);
 }
@@ -6,9 +6,11 @@
 @font-face {
     font-family: 'bubble club';
     src: url('../assets/font/bubble_club/');
-  }
+}
 
-*, ::before, ::after {
+*,
+ ::before,
+ ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -27,15 +29,19 @@
     --bratsy: "bratsy";
     --font: "bubble club";
 }
+
+
 /* MEMO: On appelle les variables comme ça: 
 body{
     color: var(--green);
 } */
 
-
-.thermosContainer{
+.thermosContainer {
     height: 200px;
     margin: auto;
+    position: relative;
+    left: 20px;
+    top: -40px;
 }
 
 .thermos {
@@ -47,19 +53,21 @@ body{
     background-repeat: no-repeat;
     z-index: 3; */
 }
-.imgThermos{
+
+.imgThermos {
     position: absolute;
 }
+
 .progressBar {
     position: relative;
     width: 200px;
     height: 27px;
     border-radius: 10px;
     background-color: var(--grey);
-	transform: rotate(-90deg);
+    transform: rotate(-90deg);
     left: -55px;
-    top:110px;
-     /* z-index: 1; */
+    top: 110px;
+    /* z-index: 1; */
 }
 
 .countdown {
@@ -69,8 +77,8 @@ body{
     text-align: center;
     writing-mode: vertical-rl;
     color: var(--red);
-    line-height: 27px; /* same as #progressBar height if we want text middle aligned */
+    line-height: 27px;
+    /* same as #progressBar height if we want text middle aligned */
     background-color: var(--brown);
-   /*  z-index: 2; */
+    /*  z-index: 2; */
 }
-

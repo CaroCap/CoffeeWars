@@ -1,23 +1,9 @@
 /* FONTS */
 
 @font-face {
-    /* bratsy (les titres) */
-    font-family: 'Bratsy';
-    src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
-}
-@font-face{
-    font-family: Bubbleboddy;
-    src: url(../assets/font/bubbleboddy_neue/Bubbleboddy-ExtraLightTrial.ttf);
-}
-@font-face{
-    font-family: Arista;
-    src: url(../assets/font/arista_pro/Arista-Pro-Light-trial.ttf);
-}
-
-@font-face {
     font-family: 'bubble club';
     src: url('../assets/font/bubble_club/');
-  }
+}
 
 
 /* Variables */
@@ -35,6 +21,8 @@
     --bubble: "Bubbleboddy";
     --font: "bubble club";
 }
+
+
 /* MEMO: On appelle les variables comme ça: 
 body{
   color: var(--green);
@@ -56,7 +44,7 @@ html {
 body {
     background-color: #381915;
     /* Désactivation du scroll */
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -266,54 +254,53 @@ header {
     font-style: var(--font);
 }
 
+
 /* SCORES */
-.containerDroite{
+
+.containerDroite {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 500px;
 }
-.scoreContainer{
+
+.scoreContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 200px;
+    position: relative;
+    right: 20px;
 }
-#scoreTitre{
+
+#scoreTitre {
     font-family: var(--bratsy);
     font-size: 50px;
     color: var(--brown);
 }
-#grainsContainer{
+
+#grainsContainer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-#scorePoints{
+
+#scorePoints {
     font-family: var(--arista);
     font-size: 50px;
     color: var(--brown);
-
 }
-#grainsCaffeScore{
+
+#grainsCaffeScore {
     width: 50px;
     height: 50px;
 }
 
 
-
-
-
-
-
-
-
-
 /* MODAL + THERMOS */
 
-
 .modalFormContainer2 {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,10 +308,7 @@ header {
     height: 350px;
 }
 
-
-
 .modalFormSecond2 {
-
     border: 5px solid #c29430;
     width: 300px;
     height: 400px;
@@ -339,7 +323,6 @@ header {
 }
 
 .modalForm2 {
-
     border: 5px solid #c2631b;
     width: 300px;
     height: 400px;
@@ -354,19 +337,11 @@ header {
 }
 
 .containerDroite2 {
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 400px;
-}
-
-
-.imgThermos {
-
-    
-}
 }
 
 

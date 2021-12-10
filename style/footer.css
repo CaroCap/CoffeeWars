@@ -1,22 +1,24 @@
 /* FONTS */
 
+
+/* 
 @font-face {
-    /* bratsy (les titres) */
+     bratsy (les titres) 
     font-family: 'bratsy';
     src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
 }
 
 @font-face {
-    /* arista (les textes paragraphes) */
+     arista (les textes paragraphes) 
     font-family: 'arista';
     src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
 }
 
 @font-face {
-    /* bubbleboddy (les textes paragraphes) */
+     bubbleboddy (les textes paragraphes) 
     font-family: 'bubbleboddy';
     src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
-}
+} */
 
 @font-face {
     /* bubbleboddy (les textes paragraphes) */
