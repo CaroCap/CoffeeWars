@@ -39,12 +39,12 @@
 
         <!-- TEST APPEL MODAL -->
         <button class="modalClic" id="Question">MODAL Test</button>
-
+        <button id="btnStart">PLAY</button>
         <section>
             <div id="container">
 
                 <div class="bodyWheel">
-                    <button id="spin">Spin</button>
+                    <button id="spin" disabled>Spin</button>
                     <span class="arrow"></span>
                     <div class="containerWheel">
                         <div class="one"><span class="spanWheel">W<br>C</span></div>
@@ -67,21 +67,21 @@
                         </div>
 
                         <div id="bloc2">
-                            <div class="local1"></div>
+                            <div class="local1" id="cafet"></div>
                             <div class="local6"></div>
-                            <div class="local2"></div>
+                            <div class="local2" id="wad"></div>
                         </div>
 
                         <div id="bloc3">
-                            <div class="local3"></div>
+                            <div class="local3" id="prof"></div>
                             <div class="local6"></div>
-                            <div class="local4"></div>
+                            <div class="local4" id="web"></div>
                         </div>
 
                         <div id="bloc4">
-                            <div class="local5"></div>
+                            <div class="local5" id="asr"></div>
                             <div class="local6"></div>
-                            <div class="local7"></div>
+                            <div class="local7" id="game"></div>
                         </div>
                     </div>
                 </div>
