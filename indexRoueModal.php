@@ -16,7 +16,7 @@
     <!-- script timer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="./script/timer.js"></script>  
-    <title>Coffe Wars</title>
+    <title>Coffee Wars</title>
     <!-- Icone Onglet -->
     <link rel="icon" type="image/x-icon" href="./assets/img/grain_cafe.png" />
 </head>
@@ -86,7 +86,29 @@
                     </div>
                 </div>
 
-                <div class="containerDroite">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="modalFormContainer2">
+            <div class="modalFormThird2">
+                <div class="modalFormSecond2">
+                    <div class="modalForm2">
+                      
+                    <div class="containerDroite2">
                     <div class="thermosContainer">
                         <div class="thermos">
                             <img class="imgThermos" src="./assets/img/thermos.png" alt="thermos">
@@ -103,6 +125,46 @@
                         </div>
                     </div>
                 </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </section>
     </div>

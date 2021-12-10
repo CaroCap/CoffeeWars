@@ -95,10 +95,16 @@
 
 .arrow{
     position: absolute;
-    top:17%;
-    left:50%;
-    transform: translateX(-50%);
-    color: black;
+    top:-17px;
+    left:237px;
+    /* transform: translateX(-50%); */
+    color: #8BC87A;
+    z-index:11;
+    background-image:url(https://media.giphy.com/media/2zdkG5LcTDPEzAYP08/giphy-downsized-large.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text; 
 }
 
 .arrow:before{
