@@ -18,6 +18,11 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   src: url('../assets/font/bubble_club/');
 }
 
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../assets/font/Roboto-Regular.ttf/');
+}
 /* Variables */
 :root {
     /* Couleurs */
@@ -30,7 +35,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
     /* Fonts */
     --bratsy: "bratsy";
     --arista: "aristaThin";
-    --font: "bubble club";
+    --font: "roboto";
 }
 
 * {
@@ -174,7 +179,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
 
  .glass {
   position: fixed; /* Stay in place */
-  z-index: 20; /* Sit on top */
+  /*z-index: 20; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; 
