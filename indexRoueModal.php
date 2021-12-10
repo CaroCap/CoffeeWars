@@ -39,6 +39,8 @@
 
         <!-- TEST APPEL MODAL -->
         <button class="modalClic" id="Question">MODAL Test</button>
+        <!-- Bouton pour lancer le jeu  -->
+        <button id="btnStart">Commencer la partie </button>
 
         <section>
             <div id="container">
@@ -58,7 +60,7 @@
                     </div>
                 </div>
 
-                <div id="board">
+                <div id="board"> <!-- //TODO Cette div est trop basse mais je ne sais pas pourquoi (Lison) -->
 
                     <div class="wrapper">
                         <div id="bloc1">
@@ -192,7 +194,7 @@
                     <span>
                         &#x2B62;
                     </span>
-                    <a class="bubbleboddy" href="">Voir le code sur Github</a>
+                    <a class="bubbleboddy" href="https://github.com/CaroCap/CoffeeWars" target="blank">Voir le code sur Github</a>
                 </p>
                 <p>
                     <!-- SVG Balises -->
