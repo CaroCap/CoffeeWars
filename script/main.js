@@ -8,10 +8,10 @@ const finPartieStart = false;
 
 // Variables
 if (score == NaN){
-    let score=0;
+    let score = 0;
 }
 else{
-    score = sessionStorage.getItem("score");
+    score = parseInt(sessionStorage.getItem("score"));
 }
 //sessionStorage.setItem("score", score)
 //sessionStorage.getItem("score")
