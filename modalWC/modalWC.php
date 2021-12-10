@@ -19,12 +19,12 @@
 <body onload="init();" style="margin:0px;">
 
 <!-- MODAL + Include de la selection de la question -->
-<div class="glass">
+<div class="glass" id="modalWC">
     <div class="modalFormContainer">
         <div class="modalFormThird">
             <div class="modalFormSecond">
                 <div class="modalForm" >
-                    <p>Ici c'est oú cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</p>                  
+                    <p>Ici c'est au cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</p>                  
                 </div>
             </div>
         </div>
