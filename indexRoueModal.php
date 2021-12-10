@@ -29,7 +29,8 @@
 
     <div id="content">
         <header>
-            <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
+            <!-- Bannière -->
+            <img id="banniere" src="assets/img/banniere_eggwhite.svg" alt="">
             <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p>
 
             <div id="blocGrainCafe">
@@ -178,7 +179,7 @@
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/profil_iman.png" alt="Barbara Branco">
+                            <img class="codeuseImg" src="assets/img/profil_barbara.png" alt="Barbara Branco">
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Barbara</h2>
