@@ -88,10 +88,11 @@
 
 .arrow{
     position: absolute;
-    top:17%;
-    left:50%;
-    transform: translateX(-50%);
+    top:-17px;
+    left:237px;
+    /* transform: translateX(-50%); */
     color: black;
+    z-index:11;
 }
 
 .arrow:before{
