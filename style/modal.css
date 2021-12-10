@@ -168,7 +168,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
     border: 6px solid black;
 }
 
-#modalQuestion{
+#modalQuestion, #modalWC, #modalFIN{
  display: none; /*Caché par défaut et apparait grace à JS*/
 }
 

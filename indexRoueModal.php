@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
-     <!-- script main -->
+    <!-- script main -->
     <script src="script/main.js" defer></script>
-     <!-- script wheel -->
+    <!-- script wheel -->
     <script src="./script/roue.js" defer></script>
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -340,7 +340,7 @@
                             </div>
                             <button id="btnValider" class="btnModal">Valider</button>
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
@@ -356,7 +356,57 @@
     </div>
 
 
+    <!-- MODAL WC -->
+    <div class="glass" id="modalWC">
+        <div class="modalFormContainer">
+            <div class="modalFormThird">
+                <div class="modalFormSecond">
+                    <div class="modalForm">
+                        <h5 class="titreQuestion">Pipi Fountain</h5>
+                        <h6 class="intituleQuestion">Ici c'est au cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</h6>
+                        <img class="imgToilet" src="assets/img/bobsBurger.jpg" alt="Bob's burgers">
+                        <button id="btnToilette" class="btnModal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MACHINE A CAFE -->
+            <div id="animation_container">
+                <canvas id="canvas"></canvas>
+                <div id="dom_overlay_container">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL END -->
+    <div class="glass" id="modalFIN">
+        <div class="modalFormContainer">
+            <div class="modalFormThird">
+                <div class="modalFormSecond">
+                    <div class="modalForm">
+                        <h2>Bravooo tu as gagné : </h2>
+                        <div class="result">
+                            <p id="PRIX"></p>
+                            <p id="score"></p>
+                        </div>
+                        <button id="btnToilette" class="btnModal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MACHINE A CAFE -->
+            <div id="animation_container">
+                <canvas id="canvas"></canvas>
+                <div id="dom_overlay_container">
+                </div>
+            </div>
+
+        </div>
+    </div>
     <script src="script/main.js"></script>
     <!-- <script src="./script/roue.js"></script> Intégré dans le js du main-->
 </body>
+
 </html>
