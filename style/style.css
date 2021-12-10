@@ -45,7 +45,7 @@ body{
 }
 
 body {
-    height: 2050px;
+    /* height: 2050px; */
     background-color: #381915;
     /* Désactivation du scroll */
     overflow-y: hidden;
