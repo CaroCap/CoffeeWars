@@ -150,8 +150,12 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
                 if (xhr.responseText == 1){
                     //sessionStorage.getItem("score")
                     //sessionStorage.removeItem("score")
-                    
-                    score = score +1;
+                    if(score >-1){
+                        score = score +1;
+                    }
+                    else{
+                        score = sessionStorage.getItem("score")
+                    }
                     sessionStorage.setItem("score", score)
 
                     document.getElementById("scorePoints").innerHTML = score;
