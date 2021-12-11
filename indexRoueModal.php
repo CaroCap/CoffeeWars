@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
     <!-- script main -->
-    <script src="script/main.js" defer></script>
+    <script src="./script/main.js" defer></script>
     <!-- script wheel -->
     <script src="./script/roue.js" defer></script>
     <!-- script machine a café -->
@@ -24,9 +23,7 @@
     <!-- Icone Onglet -->
     <link rel="icon" type="image/x-icon" href="./assets/img/grain_cafe.png" />
 </head>
-
 <body onload="init();" style="margin:0px;">
-
     <div id="content">
         <header>
             <!-- Bannière -->
@@ -39,20 +36,15 @@
                     <p class="texteGrainCafe">Qui sommes nous ?</p>
                 </a>
             </div>
-
         </header>
-
         <aside class="bienvenue">
             <p class="Texte1"> Bienvenue à Interface 3 ! </p>
             <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
-
         </aside>
-
         <!-- TEST APPEL MODAL -->
         <!-- <button class="modalClic" id="Question">MODAL Test</button> -->
         <!-- Bouton pour lancer le jeu  -->
         <button id="btnStart">Commencer la partie </button>
-
         <section>
             <div id="container">
 
@@ -70,7 +62,6 @@
                         <div class="eight"><span class="spanWheel">C<br>A<br>F<br>E<br>T</span></div>
                     </div>
                 </div>
-
                 <div id="board">
                     <div class="wrapper">
                         <div id="bloc1">
@@ -78,19 +69,16 @@
                             <div class="local6"></div>
                             <div id="wc"></div>
                         </div>
-
                         <div id="bloc2">
                             <div class="local1" id="cafet"></div>
                             <div class="local6"></div>
                             <div class="local2" id="wad"></div>
                         </div>
-
                         <div id="bloc3">
                             <div class="local3" id="prof"></div>
                             <div class="local6"></div>
                             <div class="local4" id="web"></div>
                         </div>
-
                         <div id="bloc4">
                             <div class="local5" id="asr"></div>
                             <div class="local6"></div>
@@ -98,10 +86,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
                 <div class="modalFormContainer2">
                     <div class="modalFormThird2">
                         <div class="modalFormSecond2">
@@ -124,19 +108,12 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
         </section>
     </div>
-
     <footer id="footer">
         <!-- Icone des grains de café qui ramène au jeu -->
         <div id="divGrainCafeFooter">
@@ -216,7 +193,6 @@
                             <p>Developpeuse front-end</p>
                         </div>
                     </div>
-
                 </div>
                 <!--  Div 1: div derrière en rouge  -->
                 <div id="divRouge">
@@ -245,7 +221,6 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="100.405" height="80.312" viewBox="0 0 100.405 80.312">
                         <path id="Icon_awesome-code" data-name="Icon awesome-code" d="M43.754,80.236,34.184,77.46A1.885,1.885,0,0,1,32.9,75.122L54.311,1.362A1.885,1.885,0,0,1,56.648.075l9.569,2.777A1.885,1.885,0,0,1,67.5,5.189L46.091,78.95a1.88,1.88,0,0,1-2.337,1.286ZM25.87,62.635l6.824-7.279a1.882,1.882,0,0,0-.125-2.7l-14.213-12.5,14.213-12.5a1.869,1.869,0,0,0,.125-2.7L25.87,17.676A1.884,1.884,0,0,0,23.2,17.6L.6,38.775a1.87,1.87,0,0,0,0,2.745L23.2,62.714a1.87,1.87,0,0,0,2.667-.078ZM77.2,62.73,99.8,41.536a1.87,1.87,0,0,0,0-2.745L77.2,17.582a1.9,1.9,0,0,0-2.667.078l-6.824,7.279a1.882,1.882,0,0,0,.126,2.7L82.046,40.156l-14.213,12.5a1.869,1.869,0,0,0-.125,2.7l6.824,7.279a1.885,1.885,0,0,0,2.667.094Z" transform="translate(0.002 -0.003)" fill="#f2493e" />
                     </svg>
-
                 </div>
                 <h3>Languages utilisés</h3>
                 <ul>
@@ -262,7 +237,6 @@
                     <li>Visual Studio Code</li>
                 </ul>
                 </p>
-
             </div>
             <!-- L'image du code -->
             <div>
@@ -270,7 +244,6 @@
             </div>
         </div>
     </footer>
-
     <!-- MODAL + Include de la selection de la question -->
     <div class="glass" id="modalQuestion">
         <div class="modalFormContainer">
@@ -335,27 +308,20 @@
                                     $numeroReponse += 1;
                                 };
                                 ?>
-
-
                             </div>
                             <button id="btnValider" class="btnModal">Valider</button>
                         </form>
-
                     </div>
                 </div>
             </div>
-
             <!-- MACHINE A CAFE -->
             <div id="animation_container">
                 <canvas id="canvas"></canvas>
                 <div id="dom_overlay_container">
                 </div>
             </div>
-
         </div>
     </div>
-
-
     <!-- MODAL WC -->
     <div class="glass" id="modalWC">
         <div class="modalFormContainer">
@@ -369,17 +335,14 @@
                     </div>
                 </div>
             </div>
-
             <!-- MACHINE A CAFE -->
             <div id="animation_container">
                 <canvas id="canvas"></canvas>
                 <div id="dom_overlay_container">
                 </div>
             </div>
-
         </div>
     </div>
-
     <!-- MODAL END -->
     <div class="glass" id="modalFIN">
         <div class="modalFormContainer">
@@ -395,18 +358,13 @@
                     </div>
                 </div>
             </div>
-
             <!-- MACHINE A CAFE -->
             <div id="animation_container">
                 <canvas id="canvas"></canvas>
                 <div id="dom_overlay_container">
                 </div>
             </div>
-
         </div>
     </div>
-    <script src="script/main.js"></script>
-    <!-- <script src="./script/roue.js"></script> Intégré dans le js du main-->
 </body>
-
 </html>
