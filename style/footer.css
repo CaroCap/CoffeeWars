@@ -1,32 +1,5 @@
 /* FONTS */
 
-
-
-@font-face {
-    /*  bratsy (les titres)  */
-    font-family: 'bratsy';
-    src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
-}
-
-@font-face {
-    /*  arista (les textes paragraphes)  */
-    font-family: 'arista';
-    src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
-}
-
-@font-face {
-     /* bubbleboddy (les textes paragraphes)  */
-    font-family: 'bubbleboddy';
-    src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
-}
-
-@font-face {
-    /* bubbleboddy (les textes paragraphes) */
-    font-family: 'bubble club';
-    src: url('../assets/font/bubble_club/');
-}
-
-
 /* Responsive */
 
 @media(max-width:992px) {
@@ -48,9 +21,6 @@
     --red: #F2493E;
     --brown: #381915;
     /* Fonts */
-    --bratsy: "bratsy";
-    --arista: "arista";
-    --font: "bubble club";
 }
 
 
@@ -61,21 +31,21 @@ footer {
 }
 
 footer h1 {
-    font-family: var(--bratsy);
+    /* font-family: var(--bratsy); */
     color: var(--eggwhite);
 }
 
 footer h3 {
-    font-family: var(--font);
+    /* font-family: var(--font); */
     color: var(--yellow);
 }
 
 .arista {
-    font-family: var(--arista);
+    /* font-family: var(--arista); */
 }
 
 .bubbleboddy {
-    font-family: var(--font);
+    /* font-family: var(--font); */
 }
 
 .flex {
@@ -104,7 +74,7 @@ footer h3 {
 }
 
 .texteCodeuse>p {
-    font-family: var(--font);
+/*  font-family: var(--font); */
 }
 
 #codeusesBloc p {
@@ -144,7 +114,7 @@ footer h3 {
 
 .nomCodeuse {
     color: var(--green);
-    font-family: var(--bratsy);
+    /* font-family: 'Courier New', Courier, monospace; */
     text-shadow: 0px 0px 9px #381915;
 }
 
@@ -177,7 +147,7 @@ a:link {
 }
 
 ul {
-    font-family: var(---font);
+    /* font-family: var(---font); */
     color: var(--green);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -192,7 +162,7 @@ ul {
 
 .texteGrainCafeFooter {
     display: none;
-    font-family: var(--bratsy);
+    /* font-family: var(--bratsy); */
     color: var(--eggwhite);
     font-size: 16px;
     position: absolute;
