@@ -1,13 +1,3 @@
-@font-face {
-    font-family: bratsy;
-    src: url('../assets/font/bratsy_script/bratsy.otf');
-}
-
-@font-face {
-    font-family: 'bubble club';
-    src: url('../assets/font/bubble_club/');
-}
-
 *,
  ::before,
  ::after {
@@ -26,8 +16,6 @@
     --brown: #381915;
     --grey: #c4c4c4;
     /* Fonts */
-    --bratsy: "bratsy";
-    --font: "bubble club";
 }
 
 
@@ -72,13 +60,12 @@ body{
 
 .countdown {
     height: 27px;
-    font-family: var(--font);
+    /* font-family: var(--font); */
     font-size: 15px;
     text-align: center;
     writing-mode: vertical-rl;
     color: var(--red);
-    line-height: 27px;
-    /* same as #progressBar height if we want text middle aligned */
+    line-height: 27px; /* same as #progressBar height if we want text middle aligned */
     background-color: var(--brown);
     /*  z-index: 2; */
 }

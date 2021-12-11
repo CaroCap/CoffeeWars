@@ -1,28 +1,5 @@
 /* FONTS */
-@font-face {
-    font-family: 'bratsy' ;
-    src: url('../assets/font/bratsy_script/bratsy.otf');
-}
-@font-face {
-font-family: 'aristaThin';
-src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
-}
-@font-face {
-  /* bubbleboddy (les textes paragraphes)  */
- font-family: 'bubbleboddy';
- src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
-}
 
-@font-face {
-  font-family: 'bubble club';
-  src: url('../assets/font/bubble_club/');
-}
-
-
-@font-face {
-  font-family: 'roboto';
-  src: url('../assets/font/Roboto-Regular.ttf/');
-}
 /* Variables */
 :root {
     /* Couleurs */
@@ -33,9 +10,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
     --red: #F2493E;
     --brown: #381915;
     /* Fonts */
-    --bratsy: "bratsy";
-    --arista: "aristaThin";
-    --font: "roboto";
+
 }
 
 * {
@@ -122,14 +97,14 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
 
 .titreQuestion {
   font-size: 50px;
-  font-family: var(--bratsy);
+  /* font-family: var(--bratsy); */
   margin-left: 12px;
   margin-right: 1px;
   text-align: left;
   justify-content: center;
 }
 .intituleQuestion{
-    font-family: 'roboto';
+    /* font-family: 'roboto'; */
     font-size: 20px;
     text-align: justify;
     margin: 0 20px 0 20px;
@@ -140,7 +115,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
     text-align: left;
 }
 .intituleReponse{
-    font-family: 'roboto';
+    /* font-family: 'roboto'; */
     font-size: 20px;
     text-align: left;
     margin-left: 15px;
