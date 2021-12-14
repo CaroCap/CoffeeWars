@@ -34,7 +34,10 @@ html {
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: #381915;
+    font-family: 'Courier New', Courier, monospace;
     /* Désactivation du scroll */
     overflow-y: hidden;
     overflow-x: hidden;
@@ -48,6 +51,7 @@ body {
     background-color: #381915;
     /* height: 800px; */
     width: 100%;
+    height: 0%;
 }
 
 #board {
@@ -67,7 +71,6 @@ body {
 }
 
 #content {
-    height: 100vh;
     padding-top: 20px;
     padding-left: 40px;
 }
@@ -89,7 +92,7 @@ body {
 #btnStart {
     background-color: var(--green);
     border: none;
-    /* font-family: var(--bratsy); */
+    font-family: 'Courier New', Courier, monospace;
     color: var(--brown);
     padding: 2px 32px;
     text-align: center;

@@ -15,8 +15,8 @@
 }
 
 .containerWheel {
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 250px;
     background-color: #381915;
     border-radius: 50%;
     border: 15px solid #381915;
@@ -27,7 +27,7 @@
 
 .containerWheel div {
     height: 50%;
-    width: 200px;
+    width: 100px;
     position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
     transform: translateX(-50%);
@@ -36,11 +36,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bolder;
     /* font-family: 'bubbleboddy'; */
     color: black;
-    left: 135px;
+    left: 60px;
 }
 
 .spanWheel {
@@ -91,7 +91,7 @@
 .arrow {
     position: absolute;
     top: -17px;
-    left: 237px;
+    left: 112px;
     /* transform: translateX(-50%); */
     color: #8BC87A;
     z-index: 11;
@@ -106,7 +106,7 @@
     content: "V";
     /* font-family: 'bubbleboddy'; */
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 #spin {
@@ -117,13 +117,13 @@
     z-index: 10;
     background-color: #381915;
     text-transform: uppercase;
-    border: 8px solid #381915;
-    /* font-family: 'bubbleboddy'; */
+    border: 5px solid #381915;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 10px;
     color: #FDF5BD;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     outline: none;
