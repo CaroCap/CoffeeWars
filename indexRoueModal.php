@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
     <!-- script main -->
-    <script src="script/main.js" defer></script>
+    <!-- <script src="script/main.js" defer></script> déjà mis en bas de page-->
     <!-- script wheel -->
-    <script src="./script/roue.js" defer></script>
+    <!-- <script src="./script/roue.js" defer></script> déjà inséré dans le main.js-->
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
