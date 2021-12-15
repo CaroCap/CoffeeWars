@@ -20,8 +20,8 @@ let placeScore = document.getElementById('scorePoints');
 let placeBtnStart = document.getElementById('btnStart')
 
 // Initialisation Scores
-if (score == NaN){
-    let score = 0;
+if (score == null || score == NaN){
+    score = scoreStart;
 }
 else{
     score = parseInt(sessionStorage.getItem("score"));
@@ -155,11 +155,13 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
                     //sessionStorage.getItem("score")
                     //sessionStorage.removeItem("score")
                     if(score >-1){
-                        score = score +1;
+                        // score = parseInt(sessionStorage.getItem("score"))+1;
+                        score += 1;
+                        placeScore.innerHTML = score;
                     }
-                    else{
-                        score = sessionStorage.getItem("score")
-                    }
+                    // else{
+                    //     placeScore.innerHTML = score;
+                    // }
                     sessionStorage.setItem("score", score)
 
                     document.getElementById("scorePoints").innerHTML = score;
@@ -201,18 +203,21 @@ function gameOver(){
     if(score <= PRIX3){
         document.getElementById('PRIX').innerHTML='Un bon jus de chausette 🧦';
         document.getElementById('scoreFin').innerHTML=score;
-        document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>";
+        // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
     else if (score <= PRIX2) {
         document.getElementById('PRIX').innerHTML='Un classique Americano ☕️';
         document.getElementById('scoreFin').innerHTML=score;
-        document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>";
+        // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
     else if (score >= PRIX2){
         document.getElementById('PRIX').innerHTML='Un Ristretto Italiano 🇮🇹';
         document.getElementById('scoreFin').innerHTML=score;
-        document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>";
+        // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
+    
+    sessionStorage.removeItem("score");
+
 }
 
 // FONCTION TIMER

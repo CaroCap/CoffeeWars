@@ -35,7 +35,7 @@
 
             <div id="blocGrainCafe">
                 <a href="#footer">
-                    <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                    <img id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
                     <p class="texteGrainCafe">Qui sommes nous ?</p>
                 </a>
             </div>
@@ -141,7 +141,7 @@
         <!-- Icone des grains de café qui ramène au jeu -->
         <div id="divGrainCafeFooter">
             <a href="#">
-                <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                <img id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
                 <p class="texteGrainCafeFooter">Retour au Jeu</p>
             </a>
         </div>
@@ -390,6 +390,7 @@
                         <div class="result">
                             <p id="PRIX"></p>
                             <p id="score"></p>
+                            <img src="./assets/img/grain_cafe.png" alt="grains de café">
                         </div>
                         <button id="btnToilette" class="btnModal">Fermer</button>
                     </div>
