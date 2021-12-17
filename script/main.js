@@ -1,8 +1,8 @@
 // CONSTANTES DEPART : Lancement du jeu (+ pour permettre une remise à 0 si ajout d'un bouton rejouer)
 const scoreStart = 0;
 // Mise au max du Timer
-const timeLeftStart = 10;
-const timeTotalStart = 10;
+const timeLeftStart = 180;
+const timeTotalStart = 180;
 
 const finPartieStart = false;
 
