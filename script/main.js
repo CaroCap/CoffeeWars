@@ -1,32 +1,33 @@
-// CONSTANTES DEPART : Lancement du jeu
+// CONSTANTES DEPART : Lancement du jeu (+ pour permettre une remise à 0 si ajout d'un bouton rejouer)
 const scoreStart = 0;
 // Mise au max du Timer
-const timeLeftStart = 180;
-const timeTotalStart = 180;
+const timeLeftStart = 10;
+const timeTotalStart = 10;
 
 const finPartieStart = false;
 
 // Variables
 let score;
-//sessionStorage.setItem("score", score)
-//sessionStorage.getItem("score")
-//sessionStorage.removeItem("score")
-
-let timeLeft = timeLeftStart;
-let timeTotal = timeTotalStart;
+let timeLeft;
+let timeTotal;
 
 // Emplacements
 let placeScore = document.getElementById('scorePoints');
-let placeBtnStart = document.getElementById('btnStart')
+let placeBtnStart = document.getElementById('btnStart');
+let placeBtnEnd = document.getElementById('btnEnd');
 
-// Initialisation Scores
-if (score == null || score == NaN){
-    score = scoreStart;
-}
-else{
-    score = parseInt(sessionStorage.getItem("score"));
-}
-placeScore.innerHTML = score;
+
+// Infos SESSION
+//sessionStorage.setItem("score", score)
+//sessionStorage.getItem("score")
+//sessionStorage.removeItem("score")
+// if (score == null || score == NaN){
+//     score = scoreStart;
+// }
+// else{
+//     score = parseInt(sessionStorage.getItem("score"));
+// }
+
 
 // LANCEMENT PARTIE
 // 1) BOUTON PLAY = Lancement partie -> lancement Chrono + possibilité de Spiner la roue (au départ disabled)
@@ -38,17 +39,29 @@ placeScore.innerHTML = score;
 //      + Ouverture Modal FIN avec total score et phrase selon score
 
 
-
-// 1) BOUTON PLAY = Lancement partie -> lancement Chrono + possibilité de Spiner la roue (au départ disabled)
+// 1) BOUTON PLAY/REPLAY = Lancement partie -> lancement Chrono + possibilité de Spiner la roue (au départ disabled)
 // ? BOUTON JOUER -> LANCEMENT PARTIE (Showme, Timer)
 placeBtnStart.addEventListener("click", lancementJeu);
+placeBtnEnd.addEventListener("click", lancementJeu);
 function lancementJeu(event){
+    //Initialisation
+    score = scoreStart;
+    timeLeft = timeLeftStart;
+    timeTotal = timeTotalStart;
+    // Fermer Modals si = Rejouer
+    document.getElementById("modalFIN").style.display = 'none';
+    document.getElementById("modalQuestion").style.display = 'none';
+    document.getElementById("modalWC").style.display = 'none';
+
+    // Placement Score 0
+    document.getElementById("scorePoints").innerHTML = score;
+
     // LANCEMENT TIMER
     progress(timeLeft, timeTotal, $('#progressBar'));
     // ENLEVER DISABLED SUR SPIN
     document.getElementById("spin").removeAttribute('disabled');
     // FAIRE DISPARAITRE BOUTON JOUER
-    document.getElementById('btnStart').setAttribute('hidden', '');
+    document.getElementById("btnStart").style.display = 'none';
 }
 
 // 2) SPIN la roue -> quand la roue s'arrête -> Récupérer nom de la salle montrée par la roue
@@ -59,7 +72,7 @@ let number = Math.ceil(Math.random() * 1000);
 let typeChoisi;
 let typeChoisiPropre;
 
-// FONCTION ROUE
+// FONCTION ROUE - quand on clic sur le SPIN
 btn.onclick = function() {
     containerWheel.style.transform = "rotate(" + number + "deg)";
     number += Math.ceil(Math.random() * 1000);
@@ -152,23 +165,13 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
                 // Si bonne réponse (xhr.responseText = le résultat de la value de notre form)
                 //! Finir ce qui se passe quand gagné
                 if (xhr.responseText == 1){
-                    //sessionStorage.getItem("score")
-                    //sessionStorage.removeItem("score")
-                    if(score >-1){
-                        // score = parseInt(sessionStorage.getItem("score"))+1;
-                        score += 1;
-                        placeScore.innerHTML = score;
-                    }
-                    // else{
-                    //     placeScore.innerHTML = score;
-                    // }
-                    sessionStorage.setItem("score", score)
+                    score= score + 1;
 
                     document.getElementById("scorePoints").innerHTML = score;
                     // fermerModal("modalQuestion");
                     document.getElementById("modalQuestion").style.display = 'none';
-
-                    location.reload();
+                    //Reloader la page en fermant le Modal pour charger new question avec session
+                    // location.reload();
                 }
 
                 // Si mauvaise réponse
@@ -177,7 +180,7 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
                     // document.getElementById("scorePoints").innerHTML = 2;
                     // fermerModal("modalQuestion");
                     document.getElementById("modalQuestion").style.display = 'none';
-                    location.reload();
+                    // location.reload();
                 }
             }
         }
@@ -188,6 +191,7 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
     
 });
 
+//Constantes des valeurs min points pour calculer si joueur est bon ou pas
 const PRIX3 = 10;
 const PRIX2 = 20;
 const PRIX1 = 30;
@@ -197,7 +201,7 @@ const PRIX1 = 30;
 // 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
 //      + Ouverture Modal FIN avec total score et phrase selon score
 function gameOver(){
-    score = sessionStorage.getItem("score");
+    // score = sessionStorage.getItem("score");
     document.getElementById('spin').setAttribute('disabled', '');
     ouvrirModal('modalFIN')
     if(score <= PRIX3){
@@ -216,7 +220,8 @@ function gameOver(){
         // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
     
-    sessionStorage.removeItem("score");
+    // Enlever le score en fin de partie de la session storage pour pouvoir rejouer à 0
+    // sessionStorage.removeItem("score");
 
 }
 
@@ -238,10 +243,7 @@ function progress(timeleft, timetotal, $element) {
 // MODALS
 // Get the modal
 let modal;
-function ouvrirModal(idModal){
-    // event.preventDefault();
-    // Récupérer le nom de l'id du clic pour pouvoir le mettre dans le modal et ouvrir le bon modal
-    // modalID = "modal"+this.id;
+function ouvrirModal(idModal){   
     modal = document.getElementById(idModal);
     modal.style.display = "block";
 }

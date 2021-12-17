@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" type="text/css" href="./style/roue.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
+    <link rel="stylesheet" href="./style/style.css">
     <!-- script main -->
     <!-- <script src="script/main.js" defer></script> déjà mis en bas de page-->
     <!-- script wheel -->
@@ -35,7 +35,7 @@
 
             <div id="blocGrainCafe">
                 <a href="#footer">
-                    <img id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
+                    <img class="grain_cafe" id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
                     <p class="texteGrainCafe">Qui sommes nous ?</p>
                 </a>
             </div>
@@ -48,10 +48,12 @@
 
         </aside>
 
-        <!-- TEST APPEL MODAL -->
+        <!-- Test appel Modal -->
         <!-- <button class="modalClic" id="Question">MODAL Test</button> -->
         <!-- Bouton pour lancer le jeu  -->
-        <button id="btnStart">Commencer la partie </button>
+        <div>
+            <button id="btnStart">Commencer la partie </button>
+        </div>
 
         <section>
             <div id="container">
@@ -120,7 +122,7 @@
                                     <div class="scoreContainer">
                                         <div id="grainsContainer">
                                             <span id="scorePoints">0</span>
-                                            <img id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
+                                            <img class="grain_cafe" id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
                                         </div>
                                     </div>
                                 </div>
@@ -141,7 +143,7 @@
         <!-- Icone des grains de café qui ramène au jeu -->
         <div id="divGrainCafeFooter">
             <a href="#">
-                <img id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
+                <img class="grain_cafe" id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
                 <p class="texteGrainCafeFooter">Retour au Jeu</p>
             </a>
         </div>
@@ -389,10 +391,10 @@
                         <h2>Bravooo tu as gagné : </h2>
                         <div class="result">
                             <p id="PRIX"></p>
-                            <p id="score"></p>
-                            <img src="./assets/img/grain_cafe.png" alt="grains de café">
+                            <p id="scoreFin"></p>
+                            <img class="grain_cafe" src="./assets/img/grain_cafe.png" alt="grains de café">
                         </div>
-                        <button id="btnToilette" class="btnModal">Fermer</button>
+                        <button id="btnEnd" class="btnModal">Rejouer</button>
                     </div>
                 </div>
             </div>
