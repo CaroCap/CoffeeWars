@@ -129,6 +129,21 @@ btn.onclick = function() {
             ouvrirModal('modalWC');
         }
         else{
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4) {
+                    // Si le formulaire a bien été envoyé status = 200
+                    if (xhr.status == 200) {
+                        // (xhr.responseText = le résultat de la value de notre form)
+                            let question = JSON.parse (xhr.responseText)
+                            document.getElementById("intituleQuestion").innerHTML = question;
+                            console.log(question);
+                        }
+        
+                    }
+                }
+            xhr.open("GET", "./ajaxQuestion.php");
+            xhr.send();
             ouvrirModal('modalQuestion');
         }
     },1500);
@@ -147,6 +162,25 @@ document.getElementById("btnToilette").addEventListener("click", (event)=>{
     event.preventDefault(); 
     document.getElementById("modalWC").style.display = 'none';
 });
+
+// //Générer Question
+// function GenerationQuestion(typeQuestion) {
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = () => {
+//         if (xhr.readyState == 4) {
+//             // Si le formulaire a bien été envoyé status = 200
+//             if (xhr.status == 200) {
+//                 // (xhr.responseText = le résultat de la value de notre form)
+//                     let question = JSON.parse (xhr.responseText)
+//                     document.getElementById("intituleQuestion").innerHTML = question;
+//                     console.log(question);
+//                 }
+
+//             }
+//         }
+//     xhr.open("POST", "./ajaxQuestion.php");
+//     xhr.send();
+// }
 
 // 3) REPONSE MODAL -> Validation réponse -> True/False ? Score++ & Fermeture MODAL 
 //+ INFO perdu Gagné
