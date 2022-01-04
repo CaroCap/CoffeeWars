@@ -179,14 +179,13 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
 
  .glass {
   position: fixed; /* Stay in place */
-  /*z-index: 20; /* Sit on top */
+  z-index: 20; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; 
   height: 100%;  
   background: inherit;
   overflow: hidden;
-  z-index: 1;
 }
 
 .glass:before {
