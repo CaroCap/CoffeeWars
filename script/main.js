@@ -40,7 +40,7 @@ let placeBtnEnd = document.getElementById('btnEnd');
 
 
 // 1) BOUTON PLAY/REPLAY = Lancement partie -> lancement Chrono + possibilité de Spiner la roue (au départ disabled)
-// ? BOUTON JOUER -> LANCEMENT PARTIE (Showme, Timer)
+// ? BOUTON JOUER/REJOUER -> LANCEMENT PARTIE (Initialisation, Showme, Timer)
 placeBtnStart.addEventListener("click", lancementJeu);
 placeBtnEnd.addEventListener("click", lancementJeu);
 function lancementJeu(event){
@@ -77,6 +77,11 @@ btn.onclick = function() {
     containerWheel.style.transform = "rotate(" + number + "deg)";
     number += Math.ceil(Math.random() * 1000);
     let selectedDiv = []
+
+    // Retirer la class bright au local précédent (si besoin)
+    if(document.getElementsByClassName("bright").length >0){
+        document.getElementById(typeChoisiPropre).classList.remove('bright')
+    }
 
     setTimeout(()=>{
         containerWheel.childNodes.forEach((item)=>{
@@ -118,16 +123,15 @@ btn.onclick = function() {
 
         // Ajouter la class bright au local choisi par la roue pour qu'il s'illumine
         document.getElementById(typeChoisiPropre).classList.add("bright");
-        // ! Enlever le bright de la salle après la question
         
-        // ! Trouver un moyen de laisser quelques secondes pour illuminer la salle
-        // setTimeOut( function() {console.log("7 secondes, c'est assez ?");}, 7000); 
-
-        // ! Utiliser le typeChoisiPropre pour la question
-        // Ouvrir Modal
+        // SetTimeout pour laisser 1 seconde pour illuminer la salle avant l'ouverture du Modal
+        let myTimeout = setTimeout(function() {
+            // Ouvrir Modal WC
         if(typeChoisiPropre == 'wc'){
             ouvrirModal('modalWC');
         }
+        // Ouvrir Modal Questions
+        // ! Utiliser le typeChoisiPropre pour la question
         else{
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = () => {
@@ -146,6 +150,7 @@ btn.onclick = function() {
             xhr.send();
             ouvrirModal('modalQuestion');
         }
+        }, 1000);
     },1500);
 }
 

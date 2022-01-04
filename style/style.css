@@ -215,9 +215,9 @@ header {
     background-size: cover;
 }
 
-.local6 {
+/* .local6 {
     background-color: #381915;
-}
+} */
 
 .local7 {
     background-image: url(../assets/img/salle_game.png);
@@ -228,6 +228,12 @@ header {
     background-image: url(../assets/img/salle_toilettes.png);
     background-size: cover;
     padding-left: 150px;
+}
+
+.bright{
+    outline: none;
+    border-color: #ffe02ee8;
+    box-shadow: 0 0 50px #ffe02ee8;
 }
 
 
