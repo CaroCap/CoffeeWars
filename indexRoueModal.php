@@ -284,20 +284,10 @@
                         <form id="formQuestion">
                             <h5 class="titreQuestion">Question : </h5>
                             <h6 class="intituleQuestion" id="intituleQuestion"> </h6>
-                            <div class="divReponses">
-                                <?php
-                                // $numeroReponse = 1;
-                                // foreach ($listeReponses as $valeurObjet) {
-                                //     echo '<div class="reponseRadio">';
-                                //     echo '<input class="btnRadio" type="radio" id="' . $valeurObjet->getid() . '" name="solution" value="' . $valeurObjet->getResultat() . '"checked>';
-                                //     echo '<label for="' . $valeurObjet->getid() . '" class="intituleReponse">' . $valeurObjet->getIntitule_reponse() . "</label>";
-                                //     echo '</div>';
-                                //     $numeroReponse += 1;
-                                // };
-                                ?>
-
-
+                            <div class="divReponses" id="divReponses">
+                                <!-- Propositions réponses seront injectées via le JS -->
                             </div>
+                            
                             <button id="btnValider" class="btnModal">Valider</button>
                         </form>
 

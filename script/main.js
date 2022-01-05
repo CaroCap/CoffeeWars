@@ -71,6 +71,17 @@ let btn = document.getElementById("spin");
 let number = Math.ceil(Math.random() * 1000);
 let typeChoisi;
 let typeChoisiPropre;
+//Variables pour le traitement des questions réponses de la DB
+let ID_Type;
+// let ID_Question;
+let QuestionReponse;
+let question;
+let reponses;
+
+// Variable pour manipuler DOM du html pour ajouter réponses
+let newDiv;
+let newInput;
+let newLabel;
 
 // FONCTION ROUE - quand on clic sur le SPIN
 btn.onclick = function() {
@@ -82,6 +93,10 @@ btn.onclick = function() {
     if(document.getElementsByClassName("bright").length >0){
         document.getElementById(typeChoisiPropre).classList.remove('bright')
     }
+
+    // Cleaner les anciennes questions
+    document.getElementById("divReponses").innerHTML="";
+
 
     setTimeout(()=>{
         containerWheel.childNodes.forEach((item)=>{
@@ -103,21 +118,27 @@ btn.onclick = function() {
         }
         else if (typeChoisi == "W<br>E<br>B"){
             typeChoisiPropre = "web"
+            ID_Type = 1;
         }
         else if (typeChoisi == "W<br>A<br>D"){
             typeChoisiPropre = "wad"
+            ID_Type = 2;
         }
         else if (typeChoisi == "G<br>A<br>M<br>E"){
             typeChoisiPropre = "game"
+            ID_Type = 3;
         }
         else if (typeChoisi == "A<br>S<br>R"){
             typeChoisiPropre = "asr"
+            ID_Type = 4;
         }
         else if (typeChoisi == "P<br>R<br>O<br>F"){
             typeChoisiPropre = "prof"
+            ID_Type = 5;
         }
         else if (typeChoisi == "C<br>A<br>F<br>E<br>T"){
             typeChoisiPropre = "cafet"
+            ID_Type = 6;
         }
         console.log(typeChoisiPropre);
 
@@ -131,23 +152,59 @@ btn.onclick = function() {
             ouvrirModal('modalWC');
         }
         // Ouvrir Modal Questions
-        // ! Utiliser le typeChoisiPropre pour la question
         else{
+            // Récupérer ID Question Aléatoire selon type de la roue
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = () => {
                 if (xhr.readyState == 4) {
                     // Si le formulaire a bien été envoyé status = 200
                     if (xhr.status == 200) {
                         // (xhr.responseText = le résultat de la value de notre form)
-                            let question = JSON.parse (xhr.responseText)
-                            document.getElementById("intituleQuestion").innerHTML = question;
-                            console.log(question);
+                            QuestionReponse = JSON.parse (xhr.responseText);
+                            console.log("OBJET QUESTION REPONSE = ", QuestionReponse);
+                            console.log(typeof(QuestionReponse))
+                            // Insérer Intitulé question dans le html
+                            document.getElementById("intituleQuestion").innerHTML = QuestionReponse[1];
+                            console.log("QUESTION = ", QuestionReponse[1]);
+
+                            // Insérer Réponses dans le html pour chaque élément de réponse
+                            QuestionReponse[2].forEach(element => {
+                                
+                                // CREATION DIV POUR BOUTON RADIO
+                                newDiv = document.createElement("div");
+                                newDiv.setAttribute("id","reponse_id"+element["ID"]);
+                                newDiv.setAttribute("class","reponseRadio");
+                                
+                                // CREATION BOUTON RADIO
+                                newInput = document.createElement("input");
+                                newInput.setAttribute("class", "btnRadio");
+                                newInput.setAttribute("type", "radio");
+                                newInput.setAttribute("id", element["ID"]);
+                                newInput.setAttribute("name", "solution");
+                                newInput.setAttribute("value", element["resultat"]);
+                                newInput.setAttribute("checked", "");
+                                
+                                // CREATION LABEL POUR BOUTON
+                                newLabel = document.createElement("label")
+                                newLabel.setAttribute("for", element["ID"]);
+                                newLabel.setAttribute("class", "intituleReponse");
+                                newLabel.innerHTML = element["intitule_reponse"]
+
+                                // INJECTION DANS LE HTML
+                                document.getElementById("divReponses").appendChild(newDiv);
+                                document.getElementById("reponse_id"+element["ID"]).appendChild(newInput);
+                                document.getElementById("reponse_id"+element["ID"]).appendChild(newLabel);
+
+                            });
+                            // document.getElementById("divReponses").innerHTML = QuestionReponse[2][0]["intitule_reponse"];
+                            //console.log("REPONSE = ", QuestionReponse[2][0]["intitule_reponse"]);
                         }
-        
                     }
                 }
-            xhr.open("GET", "./ajaxQuestion.php");
+            //Envoyer en GET le type de la roue dans l'url
+            xhr.open("GET", "./TraitementQuestion/ajaxQuestion.php?type="+ID_Type);
             xhr.send();
+
             ouvrirModal('modalQuestion');
         }
         }, 1000);
@@ -168,24 +225,6 @@ document.getElementById("btnToilette").addEventListener("click", (event)=>{
     document.getElementById("modalWC").style.display = 'none';
 });
 
-// //Générer Question
-// function GenerationQuestion(typeQuestion) {
-//     var xhr = new XMLHttpRequest();
-//     xhr.onreadystatechange = () => {
-//         if (xhr.readyState == 4) {
-//             // Si le formulaire a bien été envoyé status = 200
-//             if (xhr.status == 200) {
-//                 // (xhr.responseText = le résultat de la value de notre form)
-//                     let question = JSON.parse (xhr.responseText)
-//                     document.getElementById("intituleQuestion").innerHTML = question;
-//                     console.log(question);
-//                 }
-
-//             }
-//         }
-//     xhr.open("POST", "./ajaxQuestion.php");
-//     xhr.send();
-// }
 
 // 3) REPONSE MODAL -> Validation réponse -> True/False ? Score++ & Fermeture MODAL 
 //+ INFO perdu Gagné
@@ -203,7 +242,9 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
             if (xhr.status == 200) {
                 // Si bonne réponse (xhr.responseText = le résultat de la value de notre form)
                 //! Finir ce qui se passe quand gagné
-                if (xhr.responseText == 1){
+                console.log(xhr.responseText);
+                console.log(typeof(xhr.responseText));
+                if (xhr.responseText == "true"){
                     score= score + 1;
 
                     document.getElementById("scorePoints").innerHTML = score;
@@ -225,7 +266,7 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
         }
     }
     let formulaire = new FormData (document.getElementById("formQuestion"));
-    xhr.open("POST", "./traitement_Question.php");
+    xhr.open("POST", "./TraitementQuestion/traitement_Question.php");
     xhr.send(formulaire);
     
 });
