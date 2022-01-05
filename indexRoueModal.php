@@ -321,5 +321,8 @@
             </div>
         </div>
     </div>
+    
+    <script src="script/main.js"></script>
+
 </body>
 </html>
