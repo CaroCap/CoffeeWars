@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" type="text/css" href="./style/roue.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
+    <link rel="stylesheet" href="./style/style.css">
     <!-- script main -->
-    <script src="./script/main.js" defer></script>
+    <!-- <script src="script/main.js" defer></script> déjà mis en bas de page-->
     <!-- script wheel -->
-    <script src="./script/roue.js" defer></script>
+    <!-- <script src="./script/roue.js" defer></script> déjà inséré dans le main.js-->
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
@@ -32,7 +32,7 @@
 
             <div id="blocGrainCafe">
                 <a href="#footer">
-                    <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                    <img class="grain_cafe" id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
                     <p class="texteGrainCafe">Qui sommes nous ?</p>
                 </a>
             </div>
@@ -41,10 +41,14 @@
             <p class="Texte1"> Bienvenue à Interface 3 ! </p>
             <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
         </aside>
-        <!-- TEST APPEL MODAL -->
+
+        <!-- Test appel Modal -->
         <!-- <button class="modalClic" id="Question">MODAL Test</button> -->
         <!-- Bouton pour lancer le jeu  -->
-        <button id="btnStart">Commencer la partie </button>
+        <div>
+            <button id="btnStart">Commencer la partie </button>
+        </div>
+
         <section>
             <div id="container">
 
@@ -104,7 +108,7 @@
                                     <div class="scoreContainer">
                                         <div id="grainsContainer">
                                             <span id="scorePoints">0</span>
-                                            <img id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
+                                            <img class="grain_cafe" id="grainsCaffeScore" src="./assets/img/grain_cafe.png" alt="grains de café">
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +122,7 @@
         <!-- Icone des grains de café qui ramène au jeu -->
         <div id="divGrainCafeFooter">
             <a href="#">
-                <img id="grain_cafe" src="assets/img/grain_cafe.png" alt="">
+                <img class="grain_cafe" id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
                 <p class="texteGrainCafeFooter">Retour au Jeu</p>
             </a>
         </div>
@@ -250,65 +254,15 @@
             <div class="modalFormThird">
                 <div class="modalFormSecond">
                     <div class="modalForm">
-                        <?php
-                        include_once "./config/db.php";
-                        try {
-                            $bdd = new PDO(DBDRIVER . ':host=' . DBHOST . ';port=' . DBPORT . ';dbname=' . DBNAME . ';charset=' . DBCHARSET, DBUSER, DBPASS);
-                        } catch (Exception $e) {
-                            echo $e->getMessage();
-                            die();
-                        }
-                        include "./vendor/autoload.php";
 
-
-                        // TYPE SELON ROULETTE
-                        // ! à modifier avec code Laure
-                        // echo '<br><h2>Type Question : </h2>';
-                        $managerType = new TypeManager($bdd);
-                        // Sélectionner tous les types (array)
-                        $listeTypes = $managerType->select();
-                        // Choisir une type aléatoire
-                        $indexAleatoire = rand(0, count($listeTypes) - 1);
-                        $typeChoisi = $listeTypes[$indexAleatoire];
-                        // Afficher le type avec echo (fct qui se trouve dans la classe Type)
-                        // $typeChoisi->afficherType();
-                        $indexType = $typeChoisi->getid();
-
-
-                        // CHOIX QUESTION   
-                        $managerQuestion = new QuestionManager($bdd);
-                        // Sélectionner toutes les questions (array) avec filtre
-                        $listeQuestions = $managerQuestion->select(['ID_type' => $indexType]);
-                        // Choisir une question aléatoire parmi la sélection par type
-                        $indexAleatoire = rand(0, (count($listeQuestions) - 1));
-                        $questionChoisie = $listeQuestions[$indexAleatoire];
-                        // Afficher la question avec echo (fct qui se trouve dans la classe Question)
-                        // $questionChoisie->afficherQuestion();
-                        echo '<h5 class="titreQuestion">Question : </h5>';
-                        echo '<h6 class="intituleQuestion">' . $questionChoisie->getIntitule_question() . '</h6>';
-                        // Récupérer l'ID de la question pour trouver les réponses associées
-                        $indexQuestion = $questionChoisie->getid();
-
-
-                        // REPONSES ASSOCIÉES
-                        $managerReponse = new ReponseManager($bdd);
-                        // Sélectionner toutes les reponses (array) avec filtre
-                        $listeReponses = $managerReponse->select(['ID_question' => $indexQuestion]);
-                        // Créer formulaire réponses
-                        ?>
+                        <!-- Créer formulaire Question réponses -->
                         <form id="formQuestion">
-                            <div class="divReponses">
-                                <?php
-                                $numeroReponse = 1;
-                                foreach ($listeReponses as $valeurObjet) {
-                                    echo '<div class="reponseRadio">';
-                                    echo '<input class="btnRadio" type="radio" id="' . $valeurObjet->getid() . '" name="solution" value="' . $valeurObjet->getResultat() . '"checked>';
-                                    echo '<label for="' . $valeurObjet->getid() . '" class="intituleReponse">' . $valeurObjet->getIntitule_reponse() . "</label>";
-                                    echo '</div>';
-                                    $numeroReponse += 1;
-                                };
-                                ?>
+                            <h5 class="titreQuestion">Question : </h5>
+                            <h6 class="intituleQuestion" id="intituleQuestion"> </h6>
+                            <div class="divReponses" id="divReponses">
+                                <!-- Propositions réponses seront injectées via le JS -->
                             </div>
+                            
                             <button id="btnValider" class="btnModal">Valider</button>
                         </form>
                     </div>
@@ -352,9 +306,10 @@
                         <h2>Bravooo tu as gagné : </h2>
                         <div class="result">
                             <p id="PRIX"></p>
-                            <p id="score"></p>
+                            <p id="scoreFin"></p>
+                            <img class="grain_cafe" src="./assets/img/grain_cafe.png" alt="grains de café">
                         </div>
-                        <button id="btnToilette" class="btnModal">Fermer</button>
+                        <button id="btnEnd" class="btnModal">Rejouer</button>
                     </div>
                 </div>
             </div>
