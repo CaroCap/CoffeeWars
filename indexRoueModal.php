@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
     <link rel="stylesheet" href="./style/style.css">
-    <!-- script main -->
-    <!-- <script src="script/main.js" defer></script> déjà mis en bas de page-->
-    <!-- script wheel -->
-    <!-- <script src="./script/roue.js" defer></script> déjà inséré dans le main.js-->
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
@@ -23,6 +19,7 @@
     <!-- Icone Onglet -->
     <link rel="icon" type="image/x-icon" href="./assets/img/grain_cafe.png" />
 </head>
+
 <body onload="init();" style="margin:0px;">
     <div id="content">
         <header>
@@ -42,8 +39,7 @@
             <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
         </aside>
 
-        <!-- Test appel Modal -->
-        <!-- <button class="modalClic" id="Question">MODAL Test</button> -->
+        
         <!-- Bouton pour lancer le jeu  -->
         <div>
             <button id="btnStart">Commencer la partie </button>
@@ -52,6 +48,7 @@
         <section>
             <div id="container">
 
+            <!-- Roue -->
                 <div class="bodyWheel">
                     <button id="spin" disabled>Spin</button>
                     <span class="arrow"></span>
@@ -66,6 +63,8 @@
                         <div class="eight"><span class="spanWheel">C<br>A<br>F<br>E<br>T</span></div>
                     </div>
                 </div>
+
+                <!-- Locaux -->
                 <div id="board">
                     <div class="wrapper">
                         <div id="bloc1">
@@ -90,6 +89,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Score et Timer -->
                 <div class="modalFormContainer2">
                     <div class="modalFormThird2">
                         <div class="modalFormSecond2">
@@ -97,6 +98,7 @@
                                 <span id="scoreTitre">Score</span>
 
                                 <div class="containerDroite2">
+                                    <!-- Timer Thermos -->
                                     <div class="thermosContainer">
                                         <div class="thermos">
                                             <img class="imgThermos" src="./assets/img/thermos.png" alt="thermos">
@@ -105,6 +107,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Score et Grain de cafés -->
                                     <div class="scoreContainer">
                                         <div id="grainsContainer">
                                             <span id="scorePoints">0</span>
@@ -118,6 +122,8 @@
                 </div>
         </section>
     </div>
+
+    <!-- FOOTER -->
     <footer id="footer">
         <!-- Icone des grains de café qui ramène au jeu -->
         <div id="divGrainCafeFooter">
@@ -154,7 +160,7 @@
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Judy</h2>
-                            <p>Developpeuse back-end</p>
+                            <p>Développeuse back-end</p>
                         </div>
                     </div>
                     <div class="codeuseSeule">
@@ -164,7 +170,7 @@
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Barbara</h2>
-                            <p>Developpeuse front-end</p>
+                            <p>Développeuse front-end</p>
                         </div>
                     </div>
                     <div class="codeuseSeule">
@@ -174,7 +180,7 @@
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Caroline</h2>
-                            <p>Developpeuse back-end</p>
+                            <p>Développeuse back-end</p>
                         </div>
                     </div>
                     <div class="codeuseSeule">
@@ -184,7 +190,7 @@
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Laure</h2>
-                            <p>Developpeuse back-end</p>
+                            <p>Développeuse back-end</p>
                         </div>
                     </div>
                     <div class="codeuseSeule">
@@ -194,7 +200,7 @@
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Lison</h2>
-                            <p>Developpeuse front-end</p>
+                            <p>Développeuse front-end</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +254,8 @@
             </div>
         </div>
     </footer>
-    <!-- MODAL + Include de la selection de la question -->
+
+    <!-- MODAL QUESTION -->
     <div class="glass" id="modalQuestion">
         <div class="modalFormContainer">
             <div class="modalFormThird">
@@ -276,6 +283,7 @@
             </div>
         </div>
     </div>
+
     <!-- MODAL WC -->
     <div class="glass" id="modalWC">
         <div class="modalFormContainer">
@@ -297,6 +305,7 @@
             </div>
         </div>
     </div>
+    
     <!-- MODAL END -->
     <div class="glass" id="modalFIN">
         <div class="modalFormContainer">

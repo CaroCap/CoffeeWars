@@ -1,10 +1,8 @@
 // CONSTANTES DEPART : Lancement du jeu (+ pour permettre une remise à 0 si ajout d'un bouton rejouer)
 const scoreStart = 0;
 // Mise au max du Timer
-const timeLeftStart = 180;
-const timeTotalStart = 180;
-
-const finPartieStart = false;
+const timeLeftStart = 120;
+const timeTotalStart = 120;
 
 // Variables
 let score;
@@ -15,18 +13,6 @@ let timeTotal;
 let placeScore = document.getElementById('scorePoints');
 let placeBtnStart = document.getElementById('btnStart');
 let placeBtnEnd = document.getElementById('btnEnd');
-
-
-// Infos SESSION
-//sessionStorage.setItem("score", score)
-//sessionStorage.getItem("score")
-//sessionStorage.removeItem("score")
-// if (score == null || score == NaN){
-//     score = scoreStart;
-// }
-// else{
-//     score = parseInt(sessionStorage.getItem("score"));
-// }
 
 
 // LANCEMENT PARTIE
@@ -52,7 +38,11 @@ function lancementJeu(event){
     document.getElementById("modalFIN").style.display = 'none';
     document.getElementById("modalQuestion").style.display = 'none';
     document.getElementById("modalWC").style.display = 'none';
-
+    // Retirer la class bright au local précédent (si besoin)
+    if(document.getElementsByClassName("bright").length >0){
+        document.getElementById(typeChoisiPropre).classList.remove('bright')
+    }
+    
     // Placement Score 0
     document.getElementById("scorePoints").innerHTML = score;
 
@@ -71,12 +61,10 @@ let btn = document.getElementById("spin");
 let number = Math.ceil(Math.random() * 1000);
 let typeChoisi;
 let typeChoisiPropre;
-//Variables pour le traitement des questions réponses de la DB
+
+// Variables pour le traitement des questions réponses de la DB
 let ID_Type;
-// let ID_Question;
 let QuestionReponse;
-let question;
-let reponses;
 
 // Variable pour manipuler DOM du html pour ajouter réponses
 let newDiv;
@@ -94,7 +82,7 @@ btn.onclick = function() {
         document.getElementById(typeChoisiPropre).classList.remove('bright')
     }
 
-    // Cleaner les anciennes questions
+    // Cleaner les anciennes réponses du Modal question
     document.getElementById("divReponses").innerHTML="";
 
 
@@ -112,7 +100,6 @@ btn.onclick = function() {
 
         // Récupérer le type choisi par la roue
         typeChoisi = selectedDiv[0].name;
-        console.log(typeChoisi)
         if (typeChoisi == "W<br>C"){
             typeChoisiPropre = "wc"
         }
@@ -140,74 +127,71 @@ btn.onclick = function() {
             typeChoisiPropre = "cafet"
             ID_Type = 6;
         }
-        console.log(typeChoisiPropre);
 
         // Ajouter la class bright au local choisi par la roue pour qu'il s'illumine
         document.getElementById(typeChoisiPropre).classList.add("bright");
         
-        // SetTimeout pour laisser 1 seconde pour illuminer la salle avant l'ouverture du Modal
+        // SetTimeout pour laisser 1 seconde (1000 milisecondes) pour illuminer la salle avant l'ouverture du Modal
         let myTimeout = setTimeout(function() {
             // Ouvrir Modal WC
-        if(typeChoisiPropre == 'wc'){
-            ouvrirModal('modalWC');
-        }
-        // Ouvrir Modal Questions
-        else{
-            // Récupérer ID Question Aléatoire selon type de la roue
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState == 4) {
-                    // Si le formulaire a bien été envoyé status = 200
-                    if (xhr.status == 200) {
-                        // (xhr.responseText = le résultat de la value de notre form)
-                            QuestionReponse = JSON.parse (xhr.responseText);
-                            console.log("OBJET QUESTION REPONSE = ", QuestionReponse);
-                            console.log(typeof(QuestionReponse))
-                            // Insérer Intitulé question dans le html
-                            document.getElementById("intituleQuestion").innerHTML = QuestionReponse[1];
-                            console.log("QUESTION = ", QuestionReponse[1]);
+            if(typeChoisiPropre == 'wc'){
+                ouvrirModal('modalWC');
+            }
+            // Ouvrir Modal Questions
+            else{
+                // Récupérer ID Question Aléatoire selon type de la roue et le noté dans le xhr.open("GET", "./TraitementQuestion/ajaxQuestion.php?type="+ID_Type)
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState == 4) {
+                        // Si le formulaire a bien été envoyé status = 200
+                        if (xhr.status == 200) {
+                            // (xhr.responseText = le résultat de la value de notre form)
+                                QuestionReponse = JSON.parse (xhr.responseText);
+                                // console.log("OBJET QUESTION REPONSES = ", QuestionReponse);
 
-                            // Insérer Réponses dans le html pour chaque élément de réponse
-                            QuestionReponse[2].forEach(element => {
-                                
-                                // CREATION DIV POUR BOUTON RADIO
-                                newDiv = document.createElement("div");
-                                newDiv.setAttribute("id","reponse_id"+element["ID"]);
-                                newDiv.setAttribute("class","reponseRadio");
-                                
-                                // CREATION BOUTON RADIO
-                                newInput = document.createElement("input");
-                                newInput.setAttribute("class", "btnRadio");
-                                newInput.setAttribute("type", "radio");
-                                newInput.setAttribute("id", element["ID"]);
-                                newInput.setAttribute("name", "solution");
-                                newInput.setAttribute("value", element["resultat"]);
-                                newInput.setAttribute("checked", "");
-                                
-                                // CREATION LABEL POUR BOUTON
-                                newLabel = document.createElement("label")
-                                newLabel.setAttribute("for", element["ID"]);
-                                newLabel.setAttribute("class", "intituleReponse");
-                                newLabel.innerHTML = element["intitule_reponse"]
+                                // Insérer Intitulé question dans le html
+                                document.getElementById("intituleQuestion").innerText = QuestionReponse[1];
 
-                                // INJECTION DANS LE HTML
-                                document.getElementById("divReponses").appendChild(newDiv);
-                                document.getElementById("reponse_id"+element["ID"]).appendChild(newInput);
-                                document.getElementById("reponse_id"+element["ID"]).appendChild(newLabel);
+                                // Insérer Réponses dans le html pour chaque élément de réponse
+                                QuestionReponse[2].forEach(element => {
+                                    
+                                    // CREATION DIV POUR BOUTON RADIO
+                                    newDiv = document.createElement("div");
+                                    newDiv.setAttribute("id","reponse_id"+element["ID"]);
+                                    newDiv.setAttribute("class","reponseRadio");
+                                    
+                                    // CREATION BOUTON RADIO
+                                    newInput = document.createElement("input");
+                                    newInput.setAttribute("class", "btnRadio");
+                                    newInput.setAttribute("type", "radio");
+                                    newInput.setAttribute("id", element["ID"]);
+                                    newInput.setAttribute("name", "solution");
+                                    newInput.setAttribute("value", element["resultat"]);
+                                    newInput.setAttribute("checked", "");
+                                    
+                                    // CREATION LABEL POUR BOUTON
+                                    newLabel = document.createElement("label")
+                                    newLabel.setAttribute("for", element["ID"]);
+                                    newLabel.setAttribute("class", "intituleReponse");
+                                    newLabel.innerText = element["intitule_reponse"]
 
-                            });
-                            // document.getElementById("divReponses").innerHTML = QuestionReponse[2][0]["intitule_reponse"];
-                            //console.log("REPONSE = ", QuestionReponse[2][0]["intitule_reponse"]);
+                                    // INJECTION DANS LE HTML
+                                    document.getElementById("divReponses").appendChild(newDiv);
+                                    document.getElementById("reponse_id"+element["ID"]).appendChild(newInput);
+                                    document.getElementById("reponse_id"+element["ID"]).appendChild(newLabel);
+
+                                });
+                            }
                         }
                     }
-                }
-            //Envoyer en GET le type de la roue dans l'url
-            xhr.open("GET", "./TraitementQuestion/ajaxQuestion.php?type="+ID_Type);
-            xhr.send();
+                // Envoyer en GET le type de la roue dans l'url
+                xhr.open("GET", "./TraitementQuestion/ajaxQuestion.php?type="+ID_Type);
+                xhr.send();
 
-            ouvrirModal('modalQuestion');
-        }
-        }, 1000);
+                // Ouverture du Modal de la question
+                ouvrirModal('modalQuestion');
+            }
+        }, 1000); // 1000 millisecondes avant l'ouverture du modal (pour avoir le temps de voir la salle briller)
     },1500);
 }
 
@@ -242,25 +226,20 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
             if (xhr.status == 200) {
                 // Si bonne réponse (xhr.responseText = le résultat de la value de notre form)
                 //! Finir ce qui se passe quand gagné
-                console.log(xhr.responseText);
-                console.log(typeof(xhr.responseText));
                 if (xhr.responseText == "true"){
+                    // Ajouter +1 au score
                     score= score + 1;
-
+                    // Injecter le nouveau score dans le HTML
                     document.getElementById("scorePoints").innerHTML = score;
-                    // fermerModal("modalQuestion");
+                    // Fermer le Modal Question
                     document.getElementById("modalQuestion").style.display = 'none';
-                    //Reloader la page en fermant le Modal pour charger new question avec session
-                    // location.reload();
                 }
 
                 // Si mauvaise réponse
                 //! Finir ce qui se passe quand perdu
                 else{
-                    // document.getElementById("scorePoints").innerHTML = 2;
-                    // fermerModal("modalQuestion");
+                    // Fermer le Modal Question
                     document.getElementById("modalQuestion").style.display = 'none';
-                    // location.reload();
                 }
             }
         }
@@ -272,8 +251,8 @@ document.getElementById("btnValider").addEventListener("click", (event)=>{
 });
 
 //Constantes des valeurs min points pour calculer si joueur est bon ou pas
-const PRIX3 = 10;
-const PRIX2 = 20;
+const PRIX3 = 5;
+const PRIX2 = 15;
 const PRIX1 = 30;
 
 
@@ -281,27 +260,20 @@ const PRIX1 = 30;
 // 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
 //      + Ouverture Modal FIN avec total score et phrase selon score
 function gameOver(){
-    // score = sessionStorage.getItem("score");
     document.getElementById('spin').setAttribute('disabled', '');
     ouvrirModal('modalFIN')
     if(score <= PRIX3){
         document.getElementById('PRIX').innerHTML='Un bon jus de chausette 🧦';
         document.getElementById('scoreFin').innerHTML=score;
-        // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
     else if (score <= PRIX2) {
         document.getElementById('PRIX').innerHTML='Un classique Americano ☕️';
         document.getElementById('scoreFin').innerHTML=score;
-        // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
     else if (score >= PRIX2){
         document.getElementById('PRIX').innerHTML='Un Ristretto Italiano 🇮🇹';
         document.getElementById('scoreFin').innerHTML=score;
-        // document.getElementById('phraseFin').innerHTML="<img src=\'grain_cafe.png\' width=\'100px\'>"; AJOUTER DIRECT DANS LE HTML
     }
-    
-    // Enlever le score en fin de partie de la session storage pour pouvoir rejouer à 0
-    // sessionStorage.removeItem("score");
 
 }
 
@@ -328,7 +300,7 @@ function ouvrirModal(idModal){
     modal.style.display = "block";
 }
 
-function fermerModal(iModal){
-    modal = document.getElementById(idModal);
-    modal.style.display = "none";
-}
+// function fermerModal(iModal){
+//     modal = document.getElementById(idModal);
+//     modal.style.display = "none";
+// }
