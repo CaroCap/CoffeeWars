@@ -1,24 +1,19 @@
 /* FONTS */
-
-
 @font-face {
     /*  bratsy (les titres)  */
     font-family: 'bratsy';
     src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
 }
-
 @font-face {
     /*  arista (les textes paragraphes)  */
     font-family: 'arista';
     src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
 }
-
 @font-face {
      /* bubbleboddy (les textes paragraphes)  */
     font-family: 'bubbleboddy';
     src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
 }
-
 @font-face {
     /* bubbleboddy (les textes paragraphes) */
     font-family: 'bubble club';
@@ -28,7 +23,6 @@
 
 
 /* Variables */
-
 :root {
     /* Couleurs */
     --green: #8BC87A;
@@ -42,16 +36,13 @@
     --bubble: "Bubbleboddy";
     --font: "bubble club";
 }
-
-
 /* MEMO: On appelle les variables comme ça: 
 body{
-  color: var(--green);
+    color: var(--green);
  } */
 
 
 /* CSS MAIN BOARD */
-
 * {
     padding: 0;
     margin: 0;
@@ -69,6 +60,19 @@ body {
     overflow-x: hidden;
 }
 
+/* REPARTITION MAIN */
+header{
+    height: 15vh;
+}
+.bienvenue{
+    height: 10vh;
+}
+#container{
+    height: 70vh;
+}
+
+
+
 #container {
     display: flex;
     justify-content: space-around;
@@ -80,7 +84,7 @@ body {
 }
 
 #board {
-    background-color: #381915;
+    /* background-color: #381915; */
     font-size: 20px;
     /* width: 50%; */
     /* padding: 50px; */
@@ -97,8 +101,12 @@ body {
 
 #content {
     height: 100vh;
-    padding-top: 20px;
-    padding-left: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    /* padding-top: 20px;
+    padding-left: 40px; */
 }
 
 #bloc1,
@@ -176,8 +184,6 @@ header {
 
 
 /* CSS LIQUID BUTTON  */
-
-
 /* .containerBtn {
    width: 600px;
     display: flex;
@@ -189,7 +195,6 @@ header {
 
 
 /* CSS PLAN  */
-
 .local1 {
     background-image: url(../assets/img/salle_cafet.png);
     background-size: cover;
@@ -238,16 +243,34 @@ header {
 
 
 /* CSS HEADER */
-
 header {
     display: flex;
     justify-content: space-between;
 }
 
+#blocGrainCafe{
+    position: absolute;
+    top: 20px;
+    right: 32px;
+}   
 .grain_cafe {
     width: 50px;
     height: 50px;
     margin: 20px;
+}
+/* Pour que le texte "Qui sommes-nous ?" apparaisse au hover des Grains de café */
+.texteGrainCafe {
+    display: none;
+    font-family: var(--bratsy);
+    color: var(--eggwhite);
+    font-size: 16px;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    width: 115px; /*pour que ça soit écrit sur une seule ligne*/
+}
+#blocGrainCafe:hover .texteGrainCafe {
+    display: block;
 }
 
 .texteBanner {
@@ -255,10 +278,14 @@ header {
     color: #f47c20;
     font-family: var(--bratsy);
     font-size: 30px;
+    flex-grow: 2;
+    text-align: center;
 }
 
 #banniere {
-    width: 350px;
+    width: 20vw;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .bienvenue {
@@ -267,18 +294,27 @@ header {
     font-family: var(--bratsy);
     font-size: 40px;
     padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .Texte1 {
     color: #F2493E;
     font-size: 35px;
     font-style: var(--bratsy);
+    margin-top: -25px;
 }
 
+.Texte2Container{
+    margin-top: -25px;
+}
 .Texte2 {
     color: #8BC87A;
     font-size: 30px;
     font-style: var(--bratsy);
+    display: inline;
+    margin-right: 25px;
 }
 
 
@@ -368,20 +404,4 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 400px;
-}
-
-
-/* Pour que le texte "Qui sommes-nous ?" apparaisse au hover des Grains de café */
-.texteGrainCafe {
-    display: none;
-    font-family: var(--bratsy);
-    color: var(--eggwhite);
-    font-size: 16px;
-    position: absolute;
-    top: 92px;
-    right: 0px;
-}
-
-#blocGrainCafe:hover .texteGrainCafe {
-    display: block;
 }

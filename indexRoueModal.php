@@ -36,14 +36,15 @@
         </header>
         <aside class="bienvenue">
             <p class="Texte1"> Bienvenue à Interface 3 ! </p>
-            <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
+            <div class="Texte2Container">
+                <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
+                <!-- Bouton pour lancer le jeu  -->
+                <button id="btnStart">Commencer la partie </button>
+            </div>
         </aside>
 
         
-        <!-- Bouton pour lancer le jeu  -->
-        <div>
-            <button id="btnStart">Commencer la partie </button>
-        </div>
+        
 
         <section>
             <div id="container">
