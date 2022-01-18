@@ -1,25 +1,19 @@
 /* FONTS */
-
-
-
 @font-face {
     /*  bratsy (les titres)  */
     font-family: 'bratsy';
     src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
 }
-
 @font-face {
     /*  arista (les textes paragraphes)  */
     font-family: 'arista';
     src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
 }
-
 @font-face {
      /* bubbleboddy (les textes paragraphes)  */
     font-family: 'bubbleboddy';
     src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
 }
-
 @font-face {
     /* bubbleboddy (les textes paragraphes) */
     font-family: 'bubble club';
@@ -28,7 +22,6 @@
 
 
 /* Responsive */
-
 @media(max-width:992px) {
     /*   Fin du float */
     .flex {
@@ -38,7 +31,6 @@
 
 
 /* Variables */
-
 :root {
     /* Couleurs */
     --green: #8BC87A;
@@ -55,7 +47,6 @@
 
 
 /* BALISES GLOBALES */
-
 footer {
     height: 100vh;
 }
@@ -88,10 +79,10 @@ footer h3 {
 
 
 /* BALISES PARTICULIERES */
-
 .codeuseSeule {
     display: flex;
     padding-bottom: 13px;
+    height: 13%;
 }
 
 .codeuseImg {

@@ -8,6 +8,7 @@ const timeTotalStart = 120;
 let score;
 let timeLeft;
 let timeTotal;
+let lancementGame = true
 
 // Emplacements
 let placeScore = document.getElementById('scorePoints');
@@ -27,7 +28,7 @@ let placeBtnEnd = document.getElementById('btnEnd');
 
 // 1) BOUTON PLAY/REPLAY = Lancement partie -> lancement Chrono + possibilité de Spiner la roue (au départ disabled)
 // ? BOUTON JOUER/REJOUER -> LANCEMENT PARTIE (Initialisation, Showme, Timer)
-placeBtnStart.addEventListener("click", lancementJeu);
+// placeBtnStart.addEventListener("click", lancementJeu);
 placeBtnEnd.addEventListener("click", lancementJeu);
 function lancementJeu(event){
     //Initialisation
@@ -49,9 +50,9 @@ function lancementJeu(event){
     // LANCEMENT TIMER
     progress(timeLeft, timeTotal, $('#progressBar'));
     // ENLEVER DISABLED SUR SPIN
-    document.getElementById("spin").removeAttribute('disabled');
+    // document.getElementById("spin").removeAttribute('disabled');
     // FAIRE DISPARAITRE BOUTON JOUER
-    document.getElementById("btnStart").style.display = 'none';
+    // document.getElementById("btnStart").style.display = 'none';
 }
 
 // 2) SPIN la roue -> quand la roue s'arrête -> Récupérer nom de la salle montrée par la roue
@@ -73,6 +74,10 @@ let newLabel;
 
 // FONCTION ROUE - quand on clic sur le SPIN
 btn.onclick = function() {
+    if(lancementGame== true){
+        lancementJeu();
+        lancementGame = false;
+    }
     containerWheel.style.transform = "rotate(" + number + "deg)";
     number += Math.ceil(Math.random() * 1000);
     let selectedDiv = []
@@ -260,7 +265,7 @@ const PRIX1 = 30;
 // 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
 //      + Ouverture Modal FIN avec total score et phrase selon score
 function gameOver(){
-    document.getElementById('spin').setAttribute('disabled', '');
+    // document.getElementById('spin').setAttribute('disabled', '');
     ouvrirModal('modalFIN')
     if(score <= PRIX3){
         document.getElementById('PRIX').innerHTML='Un bon jus de chausette 🧦';
@@ -304,3 +309,20 @@ function ouvrirModal(idModal){
 //     modal = document.getElementById(idModal);
 //     modal.style.display = "none";
 // }
+
+
+
+// MOUVEMENT FLECHE Haut/Bas VERS SPIN
+const placeFleche = document.getElementById("fleche");
+let topPosition = -45;
+let direction = -1;
+
+function hautBas(){
+    if(topPosition == -45) {direction = 1}
+    else if (topPosition == -25) {direction =-1}
+    topPosition += 1* direction;
+    placeFleche.style.top = `${topPosition}px`
+    requestAnimationFrame(hautBas);
+}
+// Pour faire appel une première fois à la fonction qui va s'autorappeler ensuite
+requestAnimationFrame(hautBas);

@@ -219,15 +219,16 @@ header {
     margin-top: -25px;
 }
 
-.Texte2Container{
+/* .Texte2Container{
     margin-top: -25px;
-}
+} */
 .Texte2 {
     color: #8BC87A;
     font-size: 30px;
     font-style: var(--bratsy);
     display: inline;
     margin-right: 25px;
+    margin-top: -25px;
 }
 
 

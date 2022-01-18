@@ -35,12 +35,12 @@
             </div>
         </header>
         <aside class="bienvenue">
-            <p class="Texte1"> Bienvenue à Interface 3 ! </p>
-            <div class="Texte2Container">
+            <!-- <div class="Texte2Container"> -->
+                <p class="Texte1"> Bienvenue à Interface 3 ! </p>
+                <!-- <button id="btnStart">Commencer la partie </button>
+            </div> -->
                 <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
                 <!-- Bouton pour lancer le jeu  -->
-                <button id="btnStart">Commencer la partie </button>
-            </div>
         </aside>
 
         
@@ -51,7 +51,8 @@
 
             <!-- Roue -->
                 <div class="bodyWheel">
-                    <button id="spin" disabled>Spin</button>
+                    <span id="fleche">🔰</span>
+                    <button id="spin">Spin</button>
                     <span class="arrow"></span>
                     <div class="containerWheel">
                         <div class="one"><span class="spanWheel">W<br>C</span></div>
