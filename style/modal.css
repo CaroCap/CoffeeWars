@@ -112,7 +112,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   display: flex;
   justify-content: center;
   align-items: center;
-  margin : 0 auto 10% auto;
+  margin : 5% auto 10% auto;
   padding: 20px;
   cursor: pointer;
 }
@@ -121,7 +121,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   display: flex;
   justify-content: space-evenly;
   flex-direction: column-reverse;
-  height: 350px;
+  /* height: 80%; */
   padding-top: 10px;
   padding-left: 5%;
   padding-right: 5%;
@@ -148,6 +148,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   display: flex;
   align-items: center;
   text-align: left;
+  margin-top: 5%;
 }
 .intituleReponse{
   font-family: 'roboto';
