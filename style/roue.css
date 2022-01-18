@@ -18,28 +18,28 @@
     margin: 0;
     padding: 0;
     position: relative;
-    /* background-color: white; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
     overflow: hidden;
+    height: 30vw;
+    width: 30vw;
 }
 
 .containerWheel {
-    width: 500px;
-    height: 500px;
+    width: 30vw;
+    height: 30vw;
     background-color: #381915;
     border-radius: 50%;
-    border: 15px solid #381915;
-    position: relative;
+    border: 1vw solid #381915;
+    position: absolute;
     overflow: hidden;
     transition: 1s;
 }
 
 .containerWheel div {
     height: 50%;
-    width: 200px;
+    width: 12.5vw;
     position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
     transform: translateX(-50%);
@@ -52,7 +52,7 @@
     font-weight: bolder;
     font-family: 'bubbleboddy';
     color: black;
-    left: 135px;
+    left: 8vw;
 }
 
 .spanWheel {
@@ -61,7 +61,7 @@
 }
 
 .containerWheel .one {
-    left: 50%;
+    left: 51%;
     background-color: #FDF5BD;
 }
 
@@ -102,8 +102,8 @@
 
 .arrow {
     position: absolute;
-    top: -17px;
-    left: 237px;
+    top: 0px;
+    /* left: 237px; */
     /* transform: translateX(-50%); */
     color: #8BC87A;
     z-index: 11;
@@ -118,7 +118,7 @@
     content: "V";
     font-family: 'bubbleboddy';
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 2vw;
 }
 
 #spin {
