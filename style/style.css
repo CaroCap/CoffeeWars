@@ -86,13 +86,14 @@ header {
 #containerSection {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-}
+    align-items: flex-end;
+    padding-bottom: 1vw;}
+
 /* Locaux */
 #board {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
     width: 30%;
     padding-bottom: 20px;
@@ -101,7 +102,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: 100%;
+    /* height: 100%; */
     width: 40%;
 }
 .local {
@@ -282,6 +283,7 @@ header {
     align-items: center;
     flex-direction: row;
     height: 350px;
+    margin-bottom: 5vw;
 }
 
 .modalFormSecond2 {
