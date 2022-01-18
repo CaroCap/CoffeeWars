@@ -21,7 +21,7 @@
 </head>
 
 <body onload="init();" style="margin:0px;">
-    <div id="content">
+    <div id="contentMain">
         <header>
             <!-- Bannière -->
             <img id="banniere" src="assets/img/banniere_eggwhite.svg" alt="">
@@ -47,7 +47,7 @@
         
 
         <section>
-            <div id="container">
+            <div id="containerSection">
 
             <!-- Roue -->
                 <div class="bodyWheel">
@@ -67,6 +67,19 @@
 
                 <!-- Locaux -->
                 <div id="board">
+                    <div class="locauxColonnes">
+                        <img src="./assets/img/salle_cafet.png" alt="Cafétéria" class="local" id="cafet">
+                        <img src="./assets/img/salle_prof.png" alt="Salle des Profs" class="local" id="prof">
+                        <img src="./assets/img/salle_asr.png" alt="Salle ASR" class="local" id="asr">
+                    </div>
+                    <div class="locauxColonnes">
+                        <img src="./assets/img/salle_toilettes.png" alt="Toilettes" class="local" id="wc">
+                        <img src="./assets/img/salle_wad.png" alt="Salle des WAD" class="local" id="wad">
+                        <img src="./assets/img/salle_web.png" alt="Salle des WEB" class="local" id="web">
+                        <img src="./assets/img/salle_game.png" alt="Salle des GAME" class="local" id="game">
+                    </div>
+                </div>
+                <!-- <div id="board">
                     <div class="wrapper">
                         <div id="bloc1">
                             <div class="inutile"></div>
@@ -89,7 +102,7 @@
                             <div class="local7" id="game"></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Score et Timer -->
                 <div class="modalFormContainer2">
