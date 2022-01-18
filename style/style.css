@@ -326,7 +326,6 @@ header {
 
 
 /* MODAL + THERMOS */
-
 .modalFormContainer2 {
     display: flex;
     justify-content: center;
@@ -373,7 +372,6 @@ header {
 
 
 /* Pour que le texte "Qui sommes-nous ?" apparaisse au hover des Grains de café */
-
 .texteGrainCafe {
     display: none;
     font-family: var(--bratsy);

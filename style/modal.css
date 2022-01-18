@@ -12,30 +12,28 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
  font-family: 'bubbleboddy';
  src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
 }
-
 @font-face {
   font-family: 'bubble club';
   src: url('../assets/font/bubble_club/');
 }
-
-
 @font-face {
   font-family: 'roboto';
   src: url('../assets/font/Roboto-Regular.ttf/');
 }
+
 /* Variables */
 :root {
-    /* Couleurs */
-    --green: #8BC87A;
-    --eggwhite: #FDF5BD;
-    --yellow: #F3BB41;
-    --orange: #f47c20;
-    --red: #F2493E;
-    --brown: #381915;
-    /* Fonts */
-    --bratsy: "bratsy";
-    --arista: "aristaThin";
-    --font: "roboto";
+  /* Couleurs */
+  --green: #8BC87A;
+  --eggwhite: #FDF5BD;
+  --yellow: #F3BB41;
+  --orange: #f47c20;
+  --red: #F2493E;
+  --brown: #381915;
+  /* Fonts */
+  --bratsy: "bratsy";
+  --arista: "aristaThin";
+  --font: "roboto";
 }
 
 * {
@@ -49,13 +47,14 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 830px;
+  height: 100%;
 }
 
 .modalForm {
   border: 5px solid #c2631b;
-  width: 400px;
-  height: 600px;
+  width: 30vw;
+  min-width: 400px;
+  max-height: 85vh;
   border-radius: 8%;
   background-color: #f47c20;
   display: flex;
@@ -63,13 +62,15 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   align-items: center;
   flex-direction: column;
   z-index: 100;
-  transform: translate(-20px, 10px);
+  transform: translate(-20px, 15px);
+  padding: 5%;
 }
 
 .modalFormSecond {
   border: 5px solid #c29430;
-  width: 400px;
-  height: 600px;
+  width: 30vw;
+  min-width: 400px;
+  max-height: 85vh;
   border-radius: 8%;
   background-color: #f3bb41;
   display: flex;
@@ -77,13 +78,14 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   align-items: center;
   flex-direction: column;
   z-index: 70;
-  transform: translate(-20px, 20px);
+  transform: translate(-20px, 15px);
 }
 
 .modalFormThird {
   border: 5px solid #0e0605;
-  width: 400px;
-  height: 600px;
+  width: 30vw;
+  min-width: 400px;
+  max-height: 85vh;
   border-radius: 8%;
   background-color: #381915;
   display: flex;
@@ -91,93 +93,95 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   align-items: center;
   flex-direction: column;
   z-index: 50;
-  transform: translate(-40px, 30px);
+  /* transform: translate(-40px, 30px); */
+}
+
+#formQuestion{
+  width: 100%;
 }
 
 .btnModal {
-    font-family: var(--bratsy);
-    font-size: 30px;
-    color: #381915;
-    border: 5px solid #944304;
-    background-color: #f3bb41;
-    border-radius: 10px;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 20px;
-    cursor: pointer;
+  font-family: var(--bratsy);
+  font-size: 30px;
+  color: #381915;
+  border: 5px solid #944304;
+  background-color: #f3bb41;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin : 0 auto 10% auto;
+  padding: 20px;
+  cursor: pointer;
 }
 
 .divReponses {
   display: flex;
-  /* align-items:center; */
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: column-reverse;
   height: 350px;
   padding-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .titreQuestion {
   font-size: 50px;
   font-family: var(--bratsy);
-  margin-left: 12px;
-  margin-right: 1px;
+  padding-left: 5%;
+  /* margin-left: 12px;
+  margin-right: 1px; */
   text-align: left;
   justify-content: center;
 }
 .intituleQuestion{
-    font-family: 'roboto';
-    font-size: 20px;
-    text-align: justify;
-    margin: 0 20px 0 20px;
+  font-family: 'roboto';
+  font-size: 20px;
+  text-align: justify;
+  /* margin: 0 20px 0 20px; */
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .reponseRadio{
-    display: flex;
-    align-items: center;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  text-align: left;
 }
 .intituleReponse{
-    font-family: 'roboto';
-    font-size: 20px;
-    text-align: left;
-    margin-left: 15px;
-}
-
-.imgToilet{
-  width:90%;
-  padding:10px;
-
+  font-family: 'roboto';
+  font-size: 20px;
+  text-align: left;
+  margin-left: 15px;
 }
 
 .btnRadio {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
   
-    border: 2px solid #999;
-    transition: 0.2s all linear;
-    margin-right: 5px;
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
   
-    position: relative;
-    top: 4px;
-  }
-  
+  position: relative;
+  top: 4px;
+}
+
 .btnRadio:checked {
-    border: 6px solid black;
+  border: 6px solid black;
 }
 
 #modalQuestion, #modalWC, #modalFIN{
- display: none; /*Caché par défaut et apparait grace à JS*/
+  display: none; /*Caché par défaut et apparait grace à JS*/
 }
-
- .glass {
+  
+.glass {
   position: fixed; /* Stay in place */
   z-index: 20; /* Sit on top */
   left: 0;
@@ -202,22 +206,46 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   z-index: -1;
 } 
 
+/* MODAL TOILETTE */
+.imgToilet{
+  width:90%;
+  padding:10px;
+  margin: 5%;
+}
+
+/* MODAL FIN */
+.scoreFinContainer{
+  height: fit-content;
+  margin: 10%;
+  text-align: center;
+}
+
+.scoreFinContainer p, .scoreFinContainer img{
+  display: inline;
+  margin: 0 5%;
+}
+
+#scoreFin{
+  font-family: var(--bratsy);
+  font-size: 50px;
+}
+
 /* MACHINE A CAFE */
 #animation_container {
-	position:absolute;
+  position:absolute;
 	margin:auto;
 	left:0;right:0;
 	top:0;bottom:0;
   width:1024px;
   height:768px
-  }
+}
 
-  #canvas{
-    width:1024px;
-    height: 768px;
-    position: absolute; 
-    display: block;
-  }
+#canvas{
+  width:1024px;
+  height: 768px;
+  position: absolute; 
+  display: block;
+}
   #dom_overlay_container{
     pointer-events:none; 
     overflow:hidden; 
@@ -227,4 +255,11 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
     left: 0px; 
     top: 0px; 
     display: block;
+  }
+
+
+  /* RESPONSIVE */
+  @media screen and (max-width: 1500px) 
+  {
+    
   }

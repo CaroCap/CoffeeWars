@@ -312,11 +312,14 @@
             <div class="modalFormThird">
                 <div class="modalFormSecond">
                     <div class="modalForm">
-                        <h2>Bravooo tu as gagné : </h2>
-                        <div class="result">
+                        <h5 class="titreQuestion">Bravooo ! </h5>
+                        <h6 class="intituleQuestion">Tu as gagné :</h6>
+                        <div class="intituleQuestion result">
                             <p id="PRIX"></p>
-                            <p id="scoreFin"></p>
-                            <img class="grain_cafe" src="./assets/img/grain_cafe.png" alt="grains de café">
+                            <div class="scoreFinContainer">
+                                <p id="scoreFin"></p>
+                                <img class="grain_cafe" src="./assets/img/grain_cafe.png" alt="grains de café">
+                            </div>
                         </div>
                         <button id="btnEnd" class="btnModal">Rejouer</button>
                     </div>
