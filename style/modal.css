@@ -18,8 +18,10 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
 }
 @font-face {
   font-family: 'roboto';
-  src: url('../assets/font/Roboto-Regular.ttf/');
+  src: url('../assets/font/groovy.ttf');
 }
+
+
 
 /* Variables */
 :root {
@@ -34,6 +36,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   --bratsy: "bratsy";
   --arista: "aristaThin";
   --font: "roboto";
+  --new: "'Source Sans Pro', sans-serif;";
 }
 
 * {
@@ -135,14 +138,16 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   margin-right: 1px; */
   text-align: left;
   justify-content: center;
+  font-weight: lighter;
 }
 .intituleQuestion{
-  font-family: 'roboto';
-  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
   text-align: justify;
   /* margin: 0 20px 0 20px; */
   padding-left: 5%;
   padding-right: 5%;
+  font-weight: lighter;
 }
 .reponseRadio{
   display: flex;
@@ -151,10 +156,11 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   margin-top: 5%;
 }
 .intituleReponse{
-  font-family: 'roboto';
-  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
   text-align: left;
   margin-left: 15px;
+  font-weight: lighter;
 }
 
 .btnRadio {

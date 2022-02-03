@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
     <link rel="stylesheet" href="./style/style.css">
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
@@ -306,7 +310,7 @@
                 <div class="modalFormSecond">
                     <div class="modalForm">
                         <h5 class="titreQuestion">Pipi Fountain</h5>
-                        <h6 class="intituleQuestion">Ici c'est au cas oú tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</h6>
+                        <h6 class="intituleQuestion">Ici c'est au cas où tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</h6>
                         <img class="imgToilet" src="assets/img/bobsBurger.jpg" alt="Bob's burgers">
                         <button id="btnToilette" class="btnModal">Fermer</button>
                     </div>
