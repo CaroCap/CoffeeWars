@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="stylesheet" href="./style/timer.css">
     <link rel="stylesheet" href="./style/style.css">
-    <!-- Fonts-->
+    <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
@@ -158,9 +160,9 @@
                 <!-- Div qui contient le texte et les images -->
                 <div id="codeusesBloc">
 
-                    <h1>Qui sommes nous ?</h1>
-                    <p class="bubbleboddy">
-                        Nous sommes six développeuses junior en formation chez Interface 3
+                    <h1 class="">Qui sommes nous ?</h1>
+                    <p class="dongleFont brown">
+                        Nous sommes 6 développeuses junior en formation chez <a class="hyperLien brown " href="https://www.interface3.be/">Interface3</a>
                     </p>
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
@@ -233,7 +235,7 @@
                 <div id="banniere_rouge">
                     <img src="assets/img/banniere_rouge.svg" alt="">
                 </div>
-                <p class="green bubbleboddy">
+                <p class="green dongleFont">
                     Coffee Wars est un projet collectif réalisé lors du Hackaton 2021 à Interface3.
                 </p>
                 <!-- Lien Github -->
@@ -242,7 +244,7 @@
                     <span>
                         &#x2B62;
                     </span>
-                    <a class="bubbleboddy" href="https://github.com/CaroCap/CoffeeWars" target="blank">Voir le code sur Github</a>
+                    <a class="bubbleboddy underlineNone githubLink" href="https://github.com/CaroCap/CoffeeWars" target="blank">Voir le code sur Github</a>
                 </p>
                 <p>
                     <!-- SVG Balises -->
@@ -252,14 +254,14 @@
                     </svg>
                 </div>
                 <h3>Languages utilisés</h3>
-                <ul>
+                <ul class="dongleFont">
                     <li>Html/Css</li>
                     <li>JavaScript</li>
                     <li>Php</li>
                     <li>MySql</li>
                 </ul>
                 <h3>Outils</h3>
-                <ul>
+                <ul class="dongleFont">
                     <li>Photoshop / Illustrator / XD/ Animate</li>
                     <li>Sublime Merge </li>
                     <li>Github</li>
@@ -284,7 +286,7 @@
                         <!-- Créer formulaire Question réponses -->
                         <form id="formQuestion">
                             <h5 class="titreQuestion">Question : </h5>
-                            <h6 class="intituleQuestion" id="intituleQuestion"> </h6>
+                            <h6 class="intituleQuestion dongleFont" id="intituleQuestion"> </h6>
                             <div class="divReponses" id="divReponses">
                                 <!-- Propositions réponses seront injectées via le JS -->
                             </div>
@@ -310,7 +312,8 @@
                 <div class="modalFormSecond">
                     <div class="modalForm">
                         <h5 class="titreQuestion">Pipi Fountain</h5>
-                        <h6 class="intituleQuestion">Ici c'est au cas où tu veux boire du pipi, je pense pas que c'est le cas, alors rien se passe. Try again for real coffee!</h6>
+                        <h6 class="intituleQuestion dongleFont">Ici c'est au cas où tu veux boire du pipi, je ne pense pas que ce soit le cas, alors rien ne se passe...
+                            <br>Try again for real coffee !</h6>
                         <img class="imgToilet" src="assets/img/bobsBurger.jpg" alt="Bob's burgers">
                         <button id="btnToilette" class="btnModal">Fermer</button>
                     </div>
@@ -332,9 +335,9 @@
                 <div class="modalFormSecond">
                     <div class="modalForm">
                         <h5 class="titreQuestion">Bravooo ! </h5>
-                        <h6 class="intituleQuestion">Tu as gagné :</h6>
+                        <h6 class="intituleQuestion dongleFont">Tu as gagné :</h6>
                         <div class="intituleQuestion result">
-                            <p id="PRIX"></p>
+                            <p id="PRIX" class="dongleFont"></p>
                             <div class="scoreFinContainer">
                                 <p id="scoreFin"></p>
                                 <img class="grain_cafe" src="./assets/img/grain_cafe.png" alt="grains de café">

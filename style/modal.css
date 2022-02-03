@@ -14,7 +14,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
 }
 @font-face {
   font-family: 'bubble club';
-  src: url('../assets/font/bubble_club/');
+  src: url('../assets/font/bubble_club/BUBBCC__.TTF');
 }
 @font-face {
   font-family: 'roboto';
@@ -141,13 +141,12 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   font-weight: lighter;
 }
 .intituleQuestion{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   text-align: justify;
   /* margin: 0 20px 0 20px; */
   padding-left: 5%;
   padding-right: 5%;
-  font-weight: lighter;
+  font-weight:normal;
 }
 .reponseRadio{
   display: flex;
@@ -156,11 +155,10 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   margin-top: 5%;
 }
 .intituleReponse{
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 25px;
   text-align: left;
-  margin-left: 15px;
-  font-weight: lighter;
+  margin-left: 20px;
+  font-weight:normal;
 }
 
 .btnRadio {
@@ -177,7 +175,7 @@ src: url('../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf');
   margin-right: 5px;
   
   position: relative;
-  top: 4px;
+  top: -2px;
 }
 
 .btnRadio:checked {
