@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
-    
+
     <!-- script machine a café -->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="./script/coffeemachine.js"></script>
@@ -42,20 +43,20 @@
         </header>
         <aside class="bienvenue">
             <!-- <div class="Texte2Container"> -->
-                <p class="Texte1"> Bienvenue à Interface 3 ! </p>
-                <!-- <button id="btnStart">Commencer la partie </button>
+            <p class="Texte1"> Bienvenue à Interface 3 ! </p>
+            <!-- <button id="btnStart">Commencer la partie </button>
             </div> -->
-                <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
-                <!-- Bouton pour lancer le jeu  -->
+            <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
+            <!-- Bouton pour lancer le jeu  -->
         </aside>
 
-        
-        
+
+
 
         <section>
             <div id="containerSection">
 
-            <!-- Roue -->
+                <!-- Roue -->
                 <div class="bodyWheel">
                     <span id="fleche">🔰</span>
                     <button id="spin">Spin</button>
@@ -215,14 +216,16 @@
                         </div>
                     </div>
                     <div class="codeuseSeule">
+
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/profil_lison.png" alt="Lison Ferné">
+                            <a href="https://github.com/Lison-creator" target="blank"><img class="codeuseImg" src="assets/img/profil_lison.png" alt="Lison Ferné"></a>
                         </div>
                         <div class="texteCodeuse">
                             <h2 class="nomCodeuse">Lison</h2>
                             <p>Développeuse front-end</p>
                         </div>
+
                     </div>
                 </div>
                 <!--  Div 1: div derrière en rouge  -->
@@ -290,7 +293,7 @@
                             <div class="divReponses" id="divReponses">
                                 <!-- Propositions réponses seront injectées via le JS -->
                             </div>
-                            
+
                             <button id="btnValider" class="btnModal">Valider</button>
                         </form>
                     </div>
@@ -313,7 +316,8 @@
                     <div class="modalForm">
                         <h5 class="titreQuestion">Pipi Fountain</h5>
                         <h6 class="intituleQuestion dongleFont">Ici c'est au cas où tu veux boire du pipi, je ne pense pas que ce soit le cas, alors rien ne se passe...
-                            <br>Try again for real coffee !</h6>
+                            <br>Try again for real coffee !
+                        </h6>
                         <img class="imgToilet" src="assets/img/bobsBurger.jpg" alt="Bob's burgers">
                         <button id="btnToilette" class="btnModal">Fermer</button>
                     </div>
@@ -327,7 +331,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- MODAL END -->
     <div class="glass" id="modalFIN">
         <div class="modalFormContainer">
@@ -355,8 +359,9 @@
             </div>
         </div>
     </div>
-    
+
     <script src="script/main.js"></script>
 
 </body>
+
 </html>
