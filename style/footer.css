@@ -53,13 +53,16 @@ footer h1 {
     color: var(--eggwhite);
     font-weight: lighter;
     margin-bottom: -10px;
+    height: 9vh;
 }
 
 footer h3 {
-    font-family: var(--font);
+    font-family: var(--bratsy);
     color: var(--yellow);
+    font-size: 32px;
     font-weight: lighter;
     letter-spacing: 1px;
+    margin: -15px 0 -15px 0;;
 }
 
 .arista {
@@ -86,8 +89,24 @@ footer h3 {
 .hyperLien:hover {
     font-weight: bolder;
 }
+.liste{
+    margin-left: 25px;
+}
 
 /* BALISES PARTICULIERES */
+
+.pCodeuse{
+    height: 9vh;
+}
+
+.codeusesListe{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;*/
+    align-content: space-between; 
+}
+
 .codeuseSeule {
     display: flex;
     padding-bottom: 13px;
@@ -111,6 +130,11 @@ footer h3 {
 
 .githubLink {
     letter-spacing: 1px;
+    font-family: var(--bratsy);
+    font-size: 22px;
+}
+.flecheFooter{
+    font-size: 25px;
 }
 
 #codeusesBloc p {
@@ -179,9 +203,13 @@ footer h3 {
     padding-bottom: 50px;
 }
 
+.languesOutils{
+    margin-top: -60px;
+}
+
 #languagesCode {
     position: relative;
-    left: 195px;
+    left: 215px;
     top: 48px;
 }
 
@@ -208,8 +236,7 @@ ul {
 
 #svgCode {
     position: relative;
-    top: 0;
-    left: 250px;
+    left: 60%;
     top: 101px;
 }
 
