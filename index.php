@@ -168,52 +168,70 @@
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/profil_iman.png" alt="Iman Chamileva">
+                            <a href="https://github.com/imanchamileva" target="blank">
+                                <img class="codeuseImg" src="assets/img/profil_iman.png" alt="Iman Chamileva">
+                            </a>
                         </div>
-                        <div class="texteCodeuse">
-                            <h2 class="nomCodeuse">Iman</h2>
-                            <p>Developpeuse front-end</p>
-                        </div>
+                        <a href="https://github.com/imanchamileva" target="blank">
+                            <div class="texteCodeuse">
+                                <h2 class="nomCodeuse">Iman</h2>
+                                <p>Developpeuse front-end</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/profil_judy.png" alt="Judy Ntoko Nkebani">
+                            <a href="https://github.com/CaroCap" target="blank">
+                                <img class="codeuseImg" src="assets/img/profil_judy.png" alt="Judy Ntoko Nkebani">
+                            </a>
                         </div>
-                        <div class="texteCodeuse">
-                            <h2 class="nomCodeuse">Judy</h2>
-                            <p>Développeuse back-end</p>
-                        </div>
+                        <a href="https://github.com/CaroCap" target="blank">
+                            <div class="texteCodeuse">
+                                <h2 class="nomCodeuse">Judy</h2>
+                                <p>Développeuse back-end</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/profil_barbara.png" alt="Barbara Branco">
+                            <a href="https://github.com/barbarazeviche" target="blank">
+                                <img class="codeuseImg" src="assets/img/profil_barbara.png" alt="Barbara Branco">
+                            </a>
                         </div>
-                        <div class="texteCodeuse">
-                            <h2 class="nomCodeuse">Barbara</h2>
-                            <p>Développeuse front-end</p>
-                        </div>
+                        <a href="https://github.com/barbarazeviche" target="blank">
+                            <div class="texteCodeuse">
+                                <h2 class="nomCodeuse">Barbara</h2>
+                                <p>Développeuse front-end</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/caroline_profil.png" alt="Caroline Cap">
+                            <a href="https://github.com/CaroCap" target="blank"><img class="codeuseImg" src="assets/img/caroline_profil.png" alt="Caroline Cap"></a>
                         </div>
-                        <div class="texteCodeuse">
-                            <h2 class="nomCodeuse">Caroline</h2>
-                            <p>Développeuse back-end</p>
-                        </div>
+                        <a href="https://github.com/CaroCap" target="blank">
+                            <div class="texteCodeuse">
+                                <h2 class="nomCodeuse">Caroline</h2>
+                                <p>Développeuse back-end</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <img class="codeuseImg" src="assets/img/laure_profil.png" alt="Laure Hurlet">
+                            <a href="https://github.com/acidburn38" target="blank">
+                                <img class="codeuseImg" src="assets/img/laure_profil.png" alt="Laure Hurlet">
+                            </a>
                         </div>
-                        <div class="texteCodeuse">
-                            <h2 class="nomCodeuse">Laure</h2>
-                            <p>Développeuse back-end</p>
-                        </div>
+                        <a href="https://github.com/acidburn38" target="blank">
+                            <div class="texteCodeuse">
+                                <h2 class="nomCodeuse">Laure</h2>
+                                <p>Développeuse back-end</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="codeuseSeule">
 
@@ -221,10 +239,12 @@
                         <div>
                             <a href="https://github.com/Lison-creator" target="blank"><img class="codeuseImg" src="assets/img/profil_lison.png" alt="Lison Ferné"></a>
                         </div>
-                        <div class="texteCodeuse">
-                            <h2 class="nomCodeuse">Lison</h2>
-                            <p>Développeuse front-end</p>
-                        </div>
+                        <a href="https://github.com/Lison-creator" target="blank">
+                            <div class="texteCodeuse">
+                                <h2 class="nomCodeuse">Lison</h2>
+                                <p>Développeuse front-end</p>
+                            </div>
+                        </a>
 
                     </div>
                 </div>
