@@ -182,11 +182,11 @@
                     <div class="codeuseSeule">
                         <!-- <--- FLOAT -->
                         <div>
-                            <a href="https://github.com/CaroCap" target="blank">
+                            <a href="https://github.com/JudyNtk" target="blank">
                                 <img class="codeuseImg" src="assets/img/profil_judy.png" alt="Judy Ntoko Nkebani">
                             </a>
                         </div>
-                        <a href="https://github.com/CaroCap" target="blank">
+                        <a href="https://github.com/JudyNtk" target="blank">
                             <div class="texteCodeuse">
                                 <h2 class="nomCodeuse">Judy</h2>
                                 <p>Développeuse back-end</p>
