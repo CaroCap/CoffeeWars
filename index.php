@@ -301,6 +301,13 @@
             <div>
                 <img src="" alt="">
             </div>
+            <!-- Ajouter une question -->
+            <div id="divAjoutQuestion">
+            <a href="./Ajouter_Question-FORM.php">
+                <img class="machine_cafe" id="machine_cafe" src="./assets/img/CoffeeMachinelastchangesmachine.png" alt="Ajouter une question">
+                <p class="texteMachineCafeFooter">Ajoutez vos questions/réponses</p>
+            </a>
+        </div>
         </div>
     </footer>
 

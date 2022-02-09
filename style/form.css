@@ -111,8 +111,8 @@ body{
 .containerFlex{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-top: 2vw;
+    justify-content: space-between;
+    /* margin-top: 2vw; */
 }
 
 .btnModal {
@@ -130,4 +130,43 @@ body{
     margin : 5% auto 10% auto;
     padding: 20px;
     cursor: pointer;
+}
+
+#ID_type, #intitule_question, #reponse1, #reponse2, #reponse3, #resultat1, #resultat2, #resultat3{
+    border-radius: 10px;
+    height: 3vh;
+    font-family: 'Dongle', sans-serif;
+    font-size: 28px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+#ID_type, #resultat1, #resultat2, #resultat3{
+    width: 20%;
+}
+
+#intitule_question{
+    height: 6vh;
+}
+
+.titreForm{
+    margin-top: -45px;
+}
+
+/* TRAITEMENT */
+#questionsBlocTraitement{
+    background-color: var(--orange);
+    width: 50%;
+    height: 50vh;
+    border: 3px solid var(--brown);
+    border-radius: 20px;
+    z-index: 11;
+    position: absolute;
+    top: 3vw;
+    left: 40vw;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    margin: auto;
 }
