@@ -177,9 +177,10 @@ btn.onclick = function() {
                                     // CREATION LABEL POUR BOUTON
                                     newLabel = document.createElement("label")
                                     newLabel.setAttribute("for", element["ID"]);
-                                    newLabel.setAttribute("class", "intituleReponse");
+                                    newLabel.setAttribute("class", "dongleFont");
+                                    newLabel.classList.add("intituleReponse");
                                     newLabel.innerText = element["intitule_reponse"]
-
+                                    
                                     // INJECTION DANS LE HTML
                                     document.getElementById("divReponses").appendChild(newDiv);
                                     document.getElementById("reponse_id"+element["ID"]).appendChild(newInput);
@@ -265,10 +266,9 @@ const PRIX1 = 30;
 // 4) FIN TIMER -> Stop Chrono + Stop possibilité de spiner la roue (disabled)
 //      + Ouverture Modal FIN avec total score et phrase selon score
 function gameOver(){
-    // document.getElementById('spin').setAttribute('disabled', '');
     ouvrirModal('modalFIN')
     if(score <= PRIX3){
-        document.getElementById('PRIX').innerHTML='Un bon jus de chausette 🧦';
+        document.getElementById('PRIX').innerHTML='Un bon jus de chaussettes 🧦';
         document.getElementById('scoreFin').innerHTML=score;
     }
     else if (score <= PRIX2) {

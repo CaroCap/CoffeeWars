@@ -1,50 +1,47 @@
 /* FONTS */
 @font-face {
     /*  bratsy (les titres)  */
-    font-family: 'bratsy';
-    src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
+    font-family: "bratsy";
+    src: url("../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf");
 }
 @font-face {
     /*  arista (les textes paragraphes)  */
-    font-family: 'arista';
-    src: url('../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf');
+    font-family: "arista";
+    src: url("../assets/font/arista_pro/Arista-Pro-Alternate-Light-trial.ttf");
 }
 @font-face {
-     /* bubbleboddy (les textes paragraphes)  */
-    font-family: 'bubbleboddy';
-    src: url('../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf');
+    /* bubbleboddy (les textes paragraphes)  */
+    font-family: "bubbleboddy";
+    src: url("../assets/font/bubbleboddy_neue/BubbleboddyNeue-Light\ Trial.ttf");
 }
 @font-face {
     /* bubbleboddy (les textes paragraphes) */
-    font-family: 'bubble club';
-    src: url('../assets/font/bubble_club/');
+    font-family: "bubble_club";
+    src: url("../assets/font/bubble_club/BUBBCB__.TTF");
 }
 
-
 /* Responsive */
-@media(max-width:992px) {
+@media (max-width: 992px) {
     /*   Fin du float */
     .flex {
         display: block;
     }
 }
 
-
 /* Variables */
 :root {
     /* Couleurs */
-    --green: #8BC87A;
-    --eggwhite: #FDF5BD;
-    --yellow: #F3BB41;
+    --green: #8bc87a;
+    --eggwhite: #fdf5bd;
+    --yellow: #f3bb41;
     --orange: #f47c20;
-    --red: #F2493E;
+    --red: #f2493e;
     --brown: #381915;
     /* Fonts */
     --bratsy: "bratsy";
     --arista: "arista";
-    --font: "bubble club";
+    --font: "bubble_club";
 }
-
 
 /* BALISES GLOBALES */
 footer {
@@ -54,11 +51,19 @@ footer {
 footer h1 {
     font-family: var(--bratsy);
     color: var(--eggwhite);
+    font-weight: lighter;
+    margin-bottom: -10px;
+    height: 9vh;
+    font-size: 35px;
 }
 
 footer h3 {
-    font-family: var(--font);
+    font-family: var(--bratsy);
     color: var(--yellow);
+    font-size: 32px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: -15px 0 -15px 0;;
 }
 
 .arista {
@@ -76,9 +81,33 @@ footer h3 {
 .green {
     color: var(--green);
 }
-
+.brown {
+    color: var(--brown);
+}
+.underlineNone {
+    text-decoration: none;
+}
+.hyperLien:hover {
+    font-weight: bolder;
+}
+.liste{
+    margin-left: 25px;
+}
 
 /* BALISES PARTICULIERES */
+
+.pCodeuse{
+    height: 9vh;
+}
+
+.codeusesListe{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;*/
+    align-content: space-between; 
+}
+
 .codeuseSeule {
     display: flex;
     padding-bottom: 13px;
@@ -94,8 +123,19 @@ footer h3 {
     padding-left: 10px;
 }
 
-.texteCodeuse>p {
-    font-family: var(--font);
+.texteCodeuse > p {
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.githubLink {
+    letter-spacing: 1px;
+    font-family: var(--bratsy);
+    font-size: 22px;
+}
+.flecheFooter{
+    font-size: 25px;
 }
 
 #codeusesBloc p {
@@ -128,6 +168,22 @@ footer h3 {
     padding-right: 35px;
     padding-bottom: 10px;
 }
+#codeusesBloc h2 {
+    transition: color 0.2s;
+}
+#codeusesBloc a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+#codeusesBloc a:hover {
+    text-decoration: none;
+    color: var(--eggwhite);
+}
+#codeusesBloc a:hover h2 {
+    text-decoration: none;
+    color: var(--eggwhite);
+}
 
 .codeuseSeule {
     display: flex;
@@ -137,8 +193,9 @@ footer h3 {
     color: var(--green);
     font-family: var(--bratsy);
     text-shadow: 0px 0px 9px #381915;
+    font-weight: lighter;
+    margin-bottom: -10px;
 }
-
 
 /* Paragraphe languages employés */
 
@@ -147,9 +204,13 @@ footer h3 {
     padding-bottom: 50px;
 }
 
+.languesOutils{
+    margin-top: -60px;
+}
+
 #languagesCode {
     position: relative;
-    left: 195px;
+    left: 215px;
     top: 48px;
 }
 
@@ -163,7 +224,7 @@ a:link {
     color: var(--orange);
 }
 
-#languagesCode p>span {
+#languagesCode p > span {
     color: var(--red);
 }
 
@@ -176,8 +237,7 @@ ul {
 
 #svgCode {
     position: relative;
-    top: 0;
-    left: 250px;
+    left: 60%;
     top: 101px;
 }
 
@@ -189,6 +249,7 @@ ul {
     position: absolute;
     top: 70px;
     left: 0px;
+    font-weight: lighter;
 }
 
 #divGrainCafeFooter {

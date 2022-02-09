@@ -16,8 +16,8 @@
 }
 @font-face {
     /* bubbleboddy (les textes paragraphes) */
-    font-family: 'bubble club';
-    src: url('../assets/font/bubble_club/');
+    font-family: 'bubble_club';
+    src: url('../assets/font/bubble_club/BUBBCC__.TTF');
 }
 
 
@@ -34,13 +34,22 @@
     /* Fonts */
     --bratsy: "Bratsy";
     --bubble: "Bubbleboddy";
-    --font: "bubble club";
+    --font: "bubble_club";
 }
 /* MEMO: On appelle les variables comme ça: 
 body{
     color: var(--green);
  } */
 
+/* GENERAL */
+.sourceFont{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.dongleFont{
+    font-family: 'Dongle', sans-serif;
+    font-size: 28px;
+    line-height: 25px;
+}
 
 /* CSS MAIN BOARD */
 * {
@@ -265,7 +274,7 @@ header {
 }
 
 #scorePoints {
-    font-family: var(--arista);
+    font-family: var(--bratsy);
     font-size: 50px;
     color: var(--brown);
 }

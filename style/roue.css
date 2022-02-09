@@ -31,7 +31,7 @@
     height: 30vw;
     background-color: #381915;
     border-radius: 50%;
-    border: 1vw solid #381915;
+    border: 0.8vw solid #381915;
     position: absolute;
     overflow: hidden;
     transition: 1s;
@@ -48,9 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    font-weight: bolder;
-    font-family: 'bubbleboddy';
+    
     color: black;
     left: 8vw;
 }
@@ -58,10 +56,13 @@
 .spanWheel {
     position: absolute;
     top: 10%;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'bubbleboddy';
 }
 
 .containerWheel .one {
-    left: 51%;
+    left: 50%;
     background-color: #FDF5BD;
 }
 
