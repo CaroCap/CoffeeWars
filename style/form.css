@@ -139,14 +139,11 @@ body{
     font-size: 28px;
     margin-top:5px;
     margin-bottom:5px;
+    padding-left: 5px;
 }
 
 #ID_type, #resultat1, #resultat2, #resultat3{
     width: 20%;
-}
-
-#intitule_question{
-    height: 6vh;
 }
 
 .titreForm{
@@ -156,17 +153,49 @@ body{
 /* TRAITEMENT */
 #questionsBlocTraitement{
     background-color: var(--orange);
-    width: 50%;
-    height: 50vh;
+    width: 40%;
+    height: 50%;
     border: 3px solid var(--brown);
     border-radius: 20px;
     z-index: 11;
     position: absolute;
-    top: 3vw;
-    left: 40vw;
-    padding-top: 10px;
-    padding-left: 40px;
-    padding-right: 35px;
-    padding-bottom: 10px;
-    margin: auto;
+    top: 25%;
+    left: 30%;
+    padding: 10px 35px 10px 40px;
+}
+
+#divRougeTraitement{
+    background-color: var(--red);
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 22%;
+    left: 28%;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+.titreFormTraitrement{
+    text-align: center;
+    font-size: 100px;
+    font-family: var(--bratsy);
+    font-weight: lighter;
+    color: var(--green);
+    text-shadow: 0px 0px 9px #381915;
+}
+
+.pTraitement{
+    text-align: center;
+}
+
+.aTraitement{
+    text-decoration: none;
+    color: var(--brown);
+    font-size: 50px;
+    /* text-shadow: 0px 0px 9px #381915; */
+}
+
+.aTraitement:hover{
+    font-weight: bolder;
+    color: var(--eggwhite);
 }
