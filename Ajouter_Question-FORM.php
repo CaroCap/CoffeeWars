@@ -51,10 +51,10 @@
                         </select>
                         <br>
                         <label class="dongleFont" for="intitule_question">Intitulé de la question :</label>
-                        <input type="text" id="intitule_question" name="intitule_question" require>
+                        <input type="text" id="intitule_question" name="intitule_question" required>
                         <br>
                         <label class="dongleFont" for="reponse1">1<sup>e</sup> proposition de réponse</label>
-                        <input id="reponse1" name="reponse1" type="text" require>
+                        <input id="reponse1" name="reponse1" type="text" required>
                         <label class="dongleFont" for="resultat1">Résultat réponse</label>
                         <select name="resultat1" id="resultat1">
                             <option value="0">FAUX</option>
@@ -62,15 +62,15 @@
                         </select>
                         <br>
                         <label class="dongleFont" for="reponse2">2<sup>e</sup> proposition de réponse</label>
-                        <input id="reponse2" name="reponse2" type="text" require>
-                        <label for="resultat2">Résultat réponse</label>
+                        <input id="reponse2" name="reponse2" type="text" required>
+                        <label class="dongleFont" for="resultat2">Résultat réponse</label>
                         <select class="dongleFont" name="resultat2" id="resultat2">
                             <option value="0">FAUX</option>
                             <option value="1">VRAI</option>
                         </select>
                         <br>
                         <label class="dongleFont" for="reponse3">3<sup>e</sup> proposition de réponse</label>
-                        <input id="reponse3" name="reponse3" type="text" require>
+                        <input id="reponse3" name="reponse3" type="text" required>
                         <label class="dongleFont" for="resultat3">Résultat réponse</label>
                         <select name="resultat3" id="resultat3">
                             <option value="0">FAUX</option>
