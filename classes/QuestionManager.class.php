@@ -13,10 +13,11 @@ public function __construct(PDO $objetBD)
 //INSERT INTO `questions` (`id`, `intitule_question`, `ID_type`) VALUES (NULL, 'nomQuestion', ID_type);
 public function insert(Question $uneQuestion):void
 {
-    $sql = "INSERT INTO questions (intitule_question, ID_type) VALUES (:intitule_question, :ID_type)";
+    $sql = "INSERT INTO questions (intitule_question, ID_type, valide) VALUES (:intitule_question, :ID_type, :valide)";
     $requete = $this->bdd->prepare($sql);
     $requete->bindValue(":intitule_question",$uneQuestion->intitule_question);
     $requete->bindValue(":ID_type",$uneQuestion->ID_type);
+    $requete->bindValue(":valide",$uneQuestion->valide);
     $requete->execute();
     // var_dump($requete->errorInfo());
     // die();
@@ -83,12 +84,14 @@ public function select(array $filtres = []): array
     // UPDATE
     public function update (Question $uneQuestion) : void {
         $sql = "UPDATE questions SET intitule_question = :intitule_question, 
-                                            ID_type = :ID_type
+                                            ID_type = :ID_type,
+                                            valide = :valide
                 WHERE id=:id";
         $requete = $this->bdd->prepare($sql);
         $requete->bindValue(":id", $uneQuestion->getId());
         $requete->bindValue(":intitule_question",$uneQuestion->getIntitule_question());
         $requete->bindValue(":ID_type",$uneQuestion->getID_type()); 
+        $requete->bindValue(":valide",$uneQuestion->getValide()); 
         $requete->execute();
         
     }

@@ -27,7 +27,7 @@
 
         include "./vendor/autoload.php";
 
-        $nouvelleQuestion = new Question(["intitule_question"=>$_POST["intitule_question"], "ID_type"=>$_POST["ID_type"]]);
+        $nouvelleQuestion = new Question(["intitule_question"=>$_POST["intitule_question"], "ID_type"=>$_POST["ID_type"], "valide"=>0]);
         $managerQuestion = new QuestionManager($bdd);
         $managerQuestion->insert($nouvelleQuestion);
         // récupérer l'ID de la question

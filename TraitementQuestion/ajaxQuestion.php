@@ -15,8 +15,8 @@ $typeRoue = $_GET["type"];
 
 // CHOIX QUESTION   
 $managerQuestion = new QuestionManager($bdd);
-// Sélectionner toutes les questions (array) avec filtre
-$listeQuestions = $managerQuestion->select(["ID_Type"=>$typeRoue]);
+// Sélectionner toutes les questions (array) avec filtre type roue et Validé
+$listeQuestions = $managerQuestion->select(["ID_Type"=>$typeRoue, "valide"=>1]);
 // Choisir une question aléatoire parmi la sélection par type
 $indexAleatoire = rand(0, (count($listeQuestions) - 1));
 $questionChoisie = $listeQuestions[$indexAleatoire];
