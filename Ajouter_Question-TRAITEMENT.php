@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Coffee wars - Add Question</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/form.css">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
+    <!-- Icone Onglet -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/grain_cafe.png" />
 </head>
 <body>
     <?php
@@ -39,7 +47,27 @@
 
     ?>
 
-    <a href="./Ajouter_Question-FORM.php">Ajouter une autre question</a>        
+    <div>
+        <div id="blocGrainCafe">
+            <a href="./index.php">
+                <img class="grain_cafe" id="grain_cafe" src="./assets/img/grain_cafe.png" alt="">
+                <p class="texteGrainCafe">Retour au Jeu</p>
+            </a>
+        </div>
 
+            <div>
+                <div id="questionsBlocTraitement">
+
+                    <h1 class="titreFormTraitrement">Merci</h1>
+                    <p class="pTraitement dongleFont">
+                    <a class="aTraitement" href="./Ajouter_Question-FORM.php">Ajouter une autre question</a>        
+                    </p>
+                    
+                </div>
+                <!--  Div 1: div derrière en rouge  -->
+                <div id="divRougeTraitement">
+                </div>
+            </div>
+        </div>
 </body>
 </html>

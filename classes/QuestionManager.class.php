@@ -20,7 +20,8 @@ public function insert(Question $uneQuestion):void
     $requete->execute();
     // var_dump($requete->errorInfo());
     // die();
-    $uneQuestion->hydrate(['id'=>$this->bdd->lastInsertId()]);
+    $uneQuestion->hydrate(['ID'=>$this->bdd->lastInsertId()]); 
+
 }
 
 // DELETE

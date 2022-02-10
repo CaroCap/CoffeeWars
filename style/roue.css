@@ -146,8 +146,9 @@
 #fleche{
     position: relative;
     z-index: 11;
-    font-size: 25px;
-    top: -45px;
+    top: -50px;
+    /* font-size: 25px; */
+    height: 40px;
 }
 
 /* #8BC87A - vert

@@ -261,3 +261,32 @@ ul {
 #divGrainCafeFooter:hover .texteGrainCafeFooter {
     display: block;
 }
+
+/* AJOUT QUESTION */
+#divAjoutQuestion {
+    position: absolute;
+    bottom: -100vh;
+    right: 32px;
+}
+
+#divAjoutQuestion:hover .texteMachineCafeFooter {
+    display: block;
+}
+
+.machine_cafe {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+
+.texteMachineCafeFooter {
+    display: none;
+    font-family: var(--bratsy);
+    color: var(--eggwhite);
+    font-size: 16px;
+    position: absolute;
+    bottom: 110px;
+    left: -90px;
+    font-weight: lighter;
+    line-height: 20px;
+}

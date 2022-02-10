@@ -1,8 +1,8 @@
 // CONSTANTES DEPART : Lancement du jeu (+ pour permettre une remise à 0 si ajout d'un bouton rejouer)
 const scoreStart = 0;
 // Mise au max du Timer
-const timeLeftStart = 120;
-const timeTotalStart = 120;
+const timeLeftStart = 30;
+const timeTotalStart = 30;
 
 // Variables
 let score;
@@ -40,7 +40,7 @@ function lancementJeu(event){
     document.getElementById("modalQuestion").style.display = 'none';
     document.getElementById("modalWC").style.display = 'none';
     // Retirer la class bright au local précédent (si besoin)
-    if(document.getElementsByClassName("bright").length >0){
+    if(document.getElementsByClassName("bright").length > 0){
         document.getElementById(typeChoisiPropre).classList.remove('bright')
     }
     
@@ -314,12 +314,12 @@ function ouvrirModal(idModal){
 
 // MOUVEMENT FLECHE Haut/Bas VERS SPIN
 const placeFleche = document.getElementById("fleche");
-let topPosition = -45;
+let topPosition = -50;
 let direction = -1;
 
 function hautBas(){
-    if(topPosition == -45) {direction = 1}
-    else if (topPosition == -25) {direction =-1}
+    if(topPosition == -50) {direction = 1}
+    else if (topPosition == -30) {direction =-1}
     topPosition += 1* direction;
     placeFleche.style.top = `${topPosition}px`
     requestAnimationFrame(hautBas);

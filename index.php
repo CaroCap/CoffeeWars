@@ -32,7 +32,7 @@
         <header>
             <!-- Bannière -->
             <img id="banniere" src="assets/img/banniere_eggwhite.svg" alt="">
-            <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p>
+            <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé !</p>
 
             <div id="blocGrainCafe">
                 <a href="#footer">
@@ -46,7 +46,7 @@
             <p class="Texte1"> Bienvenue à Interface 3 ! </p>
             <!-- <button id="btnStart">Commencer la partie </button>
             </div> -->
-            <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
+            <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter ! </p>
             <!-- Bouton pour lancer le jeu  -->
         </aside>
 
@@ -58,7 +58,8 @@
 
                 <!-- Roue -->
                 <div class="bodyWheel">
-                    <span id="fleche">🔰</span>
+                    <!-- <span id="fleche">🔰</span> -->
+                    <img id="fleche" src="./assets/img/arrow1.png" alt="flèche">
                     <button id="spin">Spin</button>
                     <span class="arrow"></span>
                     <div class="containerWheel">
@@ -301,6 +302,13 @@
             <div>
                 <img src="" alt="">
             </div>
+            <!-- Ajouter une question -->
+            <div id="divAjoutQuestion">
+            <a href="./Ajouter_Question-FORM.php">
+                <img class="machine_cafe" id="machine_cafe" src="./assets/img/CoffeeMachinelastchangesmachine.png" alt="Ajouter une question">
+                <p class="texteMachineCafeFooter">Ajoutez vos questions/réponses</p>
+            </a>
+        </div>
         </div>
     </footer>
 
