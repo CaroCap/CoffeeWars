@@ -15,7 +15,7 @@ class Question {
     public function hydrate (array $vals){
         foreach ($vals as $nomPropriete => $valeurPropriete) {
             if (isset($vals[$nomPropriete])) {
-                // donner une valeur `a la proprieté
+                // donner une valeur à la proprieté
                 $this->$nomPropriete = $valeurPropriete;
             } 
         }
@@ -37,7 +37,6 @@ class Question {
     public function setid($ID)
     {
         $this->ID = $ID;
-
         return $this;
     }
     /**
